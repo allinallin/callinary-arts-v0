@@ -1,0 +1,409 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'update',
+1 verbose cli   '-g',
+1 verbose cli   'generator-webapp' ]
+2 info using npm@1.3.21
+3 info using node@v0.10.24
+4 verbose url raw generator-webapp/latest
+5 verbose url resolving [ 'https://registry.npmjs.org/', './generator-webapp/latest' ]
+6 verbose url resolved https://registry.npmjs.org/generator-webapp/latest
+7 info trying registry request attempt 1 at 02:04:23
+8 http GET https://registry.npmjs.org/generator-webapp/latest
+9 http 200 https://registry.npmjs.org/generator-webapp/latest
+10 silly registry.get cb [ 200,
+10 silly registry.get   { date: 'Mon, 16 Jun 2014 06:04:24 GMT',
+10 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R14B04)',
+10 silly registry.get     etag: '"5OKQ2UWKZC2KS986NQPCDGDGH"',
+10 silly registry.get     'content-type': 'application/json',
+10 silly registry.get     'cache-control': 'max-age=30',
+10 silly registry.get     'content-length': '1314',
+10 silly registry.get     'accept-ranges': 'bytes',
+10 silly registry.get     via: '1.1 varnish',
+10 silly registry.get     age: '0',
+10 silly registry.get     'x-served-by': 'cache-v42-ASH',
+10 silly registry.get     'x-cache': 'MISS',
+10 silly registry.get     'x-cache-hits': '0',
+10 silly registry.get     'x-timer': 'S1402898664.612429,VS0,VE102',
+10 silly registry.get     vary: 'Accept',
+10 silly registry.get     'keep-alive': 'timeout=10, max=50',
+10 silly registry.get     connection: 'Keep-Alive' } ]
+11 verbose cache add [ 'generator-webapp', '*' ]
+12 verbose cache add name="generator-webapp" spec="*" args=["generator-webapp","*"]
+13 verbose parsed url { protocol: null,
+13 verbose parsed url   slashes: null,
+13 verbose parsed url   auth: null,
+13 verbose parsed url   host: null,
+13 verbose parsed url   port: null,
+13 verbose parsed url   hostname: null,
+13 verbose parsed url   hash: null,
+13 verbose parsed url   search: null,
+13 verbose parsed url   query: null,
+13 verbose parsed url   pathname: '*',
+13 verbose parsed url   path: '*',
+13 verbose parsed url   href: '*' }
+14 verbose addNamed [ 'generator-webapp', '*' ]
+15 verbose addNamed [ null, '*' ]
+16 silly lockFile 9a31b0a1-generator-webapp generator-webapp@*
+17 verbose lock generator-webapp@* /Users/allin/.npm/9a31b0a1-generator-webapp.lock
+18 silly addNameRange { name: 'generator-webapp', range: '*', hasData: false }
+19 verbose url raw generator-webapp
+20 verbose url resolving [ 'https://registry.npmjs.org/', './generator-webapp' ]
+21 verbose url resolved https://registry.npmjs.org/generator-webapp
+22 info trying registry request attempt 1 at 02:04:28
+23 verbose etag "1YHD71FB6VNQZNMMCJ3UASUC5"
+24 http GET https://registry.npmjs.org/generator-webapp
+25 http 200 https://registry.npmjs.org/generator-webapp
+26 silly registry.get cb [ 200,
+26 silly registry.get   { date: 'Mon, 16 Jun 2014 06:04:28 GMT',
+26 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+26 silly registry.get     etag: '"5OKQ2UWKZC2KS986NQPCDGDGH"',
+26 silly registry.get     'content-type': 'application/json',
+26 silly registry.get     'cache-control': 'max-age=30',
+26 silly registry.get     'content-length': '38359',
+26 silly registry.get     'accept-ranges': 'bytes',
+26 silly registry.get     via: '1.1 varnish',
+26 silly registry.get     age: '1376',
+26 silly registry.get     'x-served-by': 'cache-v37-ASH',
+26 silly registry.get     'x-cache': 'HIT',
+26 silly registry.get     'x-cache-hits': '1',
+26 silly registry.get     'x-timer': 'S1402898668.764421,VS0,VE0',
+26 silly registry.get     vary: 'Accept',
+26 silly registry.get     'keep-alive': 'timeout=10, max=50',
+26 silly registry.get     connection: 'Keep-Alive' } ]
+27 silly addNameRange number 2 { name: 'generator-webapp', range: '*', hasData: true }
+28 silly addNameRange versions [ 'generator-webapp',
+28 silly addNameRange   [ '0.1.0',
+28 silly addNameRange     '0.1.1',
+28 silly addNameRange     '0.1.2',
+28 silly addNameRange     '0.1.3',
+28 silly addNameRange     '0.1.4',
+28 silly addNameRange     '0.1.5',
+28 silly addNameRange     '0.1.6',
+28 silly addNameRange     '0.1.7',
+28 silly addNameRange     '0.2.0',
+28 silly addNameRange     '0.2.1',
+28 silly addNameRange     '0.2.2',
+28 silly addNameRange     '0.2.3',
+28 silly addNameRange     '0.2.4',
+28 silly addNameRange     '0.2.5',
+28 silly addNameRange     '0.2.6',
+28 silly addNameRange     '0.2.7',
+28 silly addNameRange     '0.3.0',
+28 silly addNameRange     '0.3.1',
+28 silly addNameRange     '0.4.0',
+28 silly addNameRange     '0.4.1',
+28 silly addNameRange     '0.4.2',
+28 silly addNameRange     '0.4.3',
+28 silly addNameRange     '0.4.4',
+28 silly addNameRange     '0.4.5',
+28 silly addNameRange     '0.4.6',
+28 silly addNameRange     '0.4.7',
+28 silly addNameRange     '0.4.8',
+28 silly addNameRange     '0.4.9' ] ]
+29 verbose addNamed [ 'generator-webapp', '0.4.9' ]
+30 verbose addNamed [ '0.4.9', '0.4.9' ]
+31 silly lockFile 435edab0-generator-webapp-0-4-9 generator-webapp@0.4.9
+32 verbose lock generator-webapp@0.4.9 /Users/allin/.npm/435edab0-generator-webapp-0-4-9.lock
+33 silly lockFile 8bb37ce4-ebapp-generator-webapp-0-4-9-tgz https://registry.npmjs.org/generator-webapp/-/generator-webapp-0.4.9.tgz
+34 verbose lock https://registry.npmjs.org/generator-webapp/-/generator-webapp-0.4.9.tgz /Users/allin/.npm/8bb37ce4-ebapp-generator-webapp-0-4-9-tgz.lock
+35 verbose addRemoteTarball [ 'https://registry.npmjs.org/generator-webapp/-/generator-webapp-0.4.9.tgz',
+35 verbose addRemoteTarball   'df8aa10af9bac7fd59f4072b9cdf0f120e8bb611' ]
+36 info retry fetch attempt 1 at 02:04:29
+37 verbose fetch to= /var/folders/rz/0qg57t812_38tqfd4m3q_q5w0000gn/T/npm-843-7bedn9Hs/1402898669210-0.28598744864575565/tmp.tgz
+38 http GET https://registry.npmjs.org/generator-webapp/-/generator-webapp-0.4.9.tgz
+39 http 200 https://registry.npmjs.org/generator-webapp/-/generator-webapp-0.4.9.tgz
+40 verbose tar unpack /var/folders/rz/0qg57t812_38tqfd4m3q_q5w0000gn/T/npm-843-7bedn9Hs/1402898669210-0.28598744864575565/tmp.tgz
+41 silly lockFile 4305e62f-9210-0-28598744864575565-package tar:///var/folders/rz/0qg57t812_38tqfd4m3q_q5w0000gn/T/npm-843-7bedn9Hs/1402898669210-0.28598744864575565/package
+42 verbose lock tar:///var/folders/rz/0qg57t812_38tqfd4m3q_q5w0000gn/T/npm-843-7bedn9Hs/1402898669210-0.28598744864575565/package /Users/allin/.npm/4305e62f-9210-0-28598744864575565-package.lock
+43 silly lockFile 382af2d6-9210-0-28598744864575565-tmp-tgz tar:///var/folders/rz/0qg57t812_38tqfd4m3q_q5w0000gn/T/npm-843-7bedn9Hs/1402898669210-0.28598744864575565/tmp.tgz
+44 verbose lock tar:///var/folders/rz/0qg57t812_38tqfd4m3q_q5w0000gn/T/npm-843-7bedn9Hs/1402898669210-0.28598744864575565/tmp.tgz /Users/allin/.npm/382af2d6-9210-0-28598744864575565-tmp-tgz.lock
+45 silly gunzTarPerm modes [ '755', '644' ]
+46 silly gunzTarPerm extractEntry package.json
+47 silly gunzTarPerm extractEntry app/index.js
+48 silly gunzTarPerm extractEntry app/USAGE
+49 silly gunzTarPerm extractEntry app/templates/Gruntfile.js
+50 silly gunzTarPerm extractEntry app/templates/gitignore
+51 silly gunzTarPerm extractEntry app/templates/_bower.json
+52 silly gunzTarPerm extractEntry app/templates/_package.json
+53 silly gunzTarPerm extractEntry app/templates/editorconfig
+54 silly gunzTarPerm extractEntry app/templates/favicon.ico
+55 silly gunzTarPerm extractEntry app/templates/gitattributes
+56 silly gunzTarPerm extractEntry app/templates/404.html
+57 silly gunzTarPerm extractEntry app/templates/htaccess
+58 silly gunzTarPerm extractEntry app/templates/index.html
+59 silly gunzTarPerm extractEntry app/templates/jshintrc
+60 silly gunzTarPerm extractEntry app/templates/main.css
+61 silly gunzTarPerm extractEntry app/templates/main.scss
+62 silly gunzTarPerm extractEntry app/templates/robots.txt
+63 silly gunzTarPerm extractEntry readme.md
+64 silly lockFile 4305e62f-9210-0-28598744864575565-package tar:///var/folders/rz/0qg57t812_38tqfd4m3q_q5w0000gn/T/npm-843-7bedn9Hs/1402898669210-0.28598744864575565/package
+65 silly lockFile 4305e62f-9210-0-28598744864575565-package tar:///var/folders/rz/0qg57t812_38tqfd4m3q_q5w0000gn/T/npm-843-7bedn9Hs/1402898669210-0.28598744864575565/package
+66 silly lockFile 382af2d6-9210-0-28598744864575565-tmp-tgz tar:///var/folders/rz/0qg57t812_38tqfd4m3q_q5w0000gn/T/npm-843-7bedn9Hs/1402898669210-0.28598744864575565/tmp.tgz
+67 silly lockFile 382af2d6-9210-0-28598744864575565-tmp-tgz tar:///var/folders/rz/0qg57t812_38tqfd4m3q_q5w0000gn/T/npm-843-7bedn9Hs/1402898669210-0.28598744864575565/tmp.tgz
+68 verbose tar pack [ '/Users/allin/.npm/generator-webapp/0.4.9/package.tgz',
+68 verbose tar pack   '/var/folders/rz/0qg57t812_38tqfd4m3q_q5w0000gn/T/npm-843-7bedn9Hs/1402898669210-0.28598744864575565/package' ]
+69 verbose tarball /Users/allin/.npm/generator-webapp/0.4.9/package.tgz
+70 verbose folder /var/folders/rz/0qg57t812_38tqfd4m3q_q5w0000gn/T/npm-843-7bedn9Hs/1402898669210-0.28598744864575565/package
+71 silly lockFile 4305e62f-9210-0-28598744864575565-package tar:///var/folders/rz/0qg57t812_38tqfd4m3q_q5w0000gn/T/npm-843-7bedn9Hs/1402898669210-0.28598744864575565/package
+72 verbose lock tar:///var/folders/rz/0qg57t812_38tqfd4m3q_q5w0000gn/T/npm-843-7bedn9Hs/1402898669210-0.28598744864575565/package /Users/allin/.npm/4305e62f-9210-0-28598744864575565-package.lock
+73 silly lockFile d30d0d44-nerator-webapp-0-4-9-package-tgz tar:///Users/allin/.npm/generator-webapp/0.4.9/package.tgz
+74 verbose lock tar:///Users/allin/.npm/generator-webapp/0.4.9/package.tgz /Users/allin/.npm/d30d0d44-nerator-webapp-0-4-9-package-tgz.lock
+75 silly lockFile 4305e62f-9210-0-28598744864575565-package tar:///var/folders/rz/0qg57t812_38tqfd4m3q_q5w0000gn/T/npm-843-7bedn9Hs/1402898669210-0.28598744864575565/package
+76 silly lockFile 4305e62f-9210-0-28598744864575565-package tar:///var/folders/rz/0qg57t812_38tqfd4m3q_q5w0000gn/T/npm-843-7bedn9Hs/1402898669210-0.28598744864575565/package
+77 silly lockFile d30d0d44-nerator-webapp-0-4-9-package-tgz tar:///Users/allin/.npm/generator-webapp/0.4.9/package.tgz
+78 silly lockFile d30d0d44-nerator-webapp-0-4-9-package-tgz tar:///Users/allin/.npm/generator-webapp/0.4.9/package.tgz
+79 silly lockFile 58bb220d-m-generator-webapp-0-4-9-package /Users/allin/.npm/generator-webapp/0.4.9/package
+80 verbose lock /Users/allin/.npm/generator-webapp/0.4.9/package /Users/allin/.npm/58bb220d-m-generator-webapp-0-4-9-package.lock
+81 silly lockFile 58bb220d-m-generator-webapp-0-4-9-package /Users/allin/.npm/generator-webapp/0.4.9/package
+82 silly lockFile 58bb220d-m-generator-webapp-0-4-9-package /Users/allin/.npm/generator-webapp/0.4.9/package
+83 verbose tar unpack /Users/allin/.npm/generator-webapp/0.4.9/package.tgz
+84 silly lockFile c729b037-m-generator-webapp-0-4-9-package tar:///Users/allin/.npm/generator-webapp/0.4.9/package
+85 verbose lock tar:///Users/allin/.npm/generator-webapp/0.4.9/package /Users/allin/.npm/c729b037-m-generator-webapp-0-4-9-package.lock
+86 silly lockFile d30d0d44-nerator-webapp-0-4-9-package-tgz tar:///Users/allin/.npm/generator-webapp/0.4.9/package.tgz
+87 verbose lock tar:///Users/allin/.npm/generator-webapp/0.4.9/package.tgz /Users/allin/.npm/d30d0d44-nerator-webapp-0-4-9-package-tgz.lock
+88 silly gunzTarPerm modes [ '755', '644' ]
+89 silly gunzTarPerm extractEntry package.json
+90 silly gunzTarPerm extractEntry app/index.js
+91 silly gunzTarPerm extractEntry app/USAGE
+92 silly gunzTarPerm extractEntry app/templates/Gruntfile.js
+93 silly gunzTarPerm extractEntry app/templates/gitignore
+94 silly gunzTarPerm extractEntry app/templates/_bower.json
+95 silly gunzTarPerm extractEntry app/templates/_package.json
+96 silly gunzTarPerm extractEntry app/templates/editorconfig
+97 silly gunzTarPerm extractEntry app/templates/favicon.ico
+98 silly gunzTarPerm extractEntry app/templates/gitattributes
+99 silly gunzTarPerm extractEntry app/templates/404.html
+100 silly gunzTarPerm extractEntry app/templates/htaccess
+101 silly gunzTarPerm extractEntry app/templates/index.html
+102 silly gunzTarPerm extractEntry app/templates/jshintrc
+103 silly gunzTarPerm extractEntry app/templates/main.css
+104 silly gunzTarPerm extractEntry app/templates/main.scss
+105 silly gunzTarPerm extractEntry app/templates/robots.txt
+106 silly gunzTarPerm extractEntry readme.md
+107 silly lockFile c729b037-m-generator-webapp-0-4-9-package tar:///Users/allin/.npm/generator-webapp/0.4.9/package
+108 silly lockFile c729b037-m-generator-webapp-0-4-9-package tar:///Users/allin/.npm/generator-webapp/0.4.9/package
+109 silly lockFile d30d0d44-nerator-webapp-0-4-9-package-tgz tar:///Users/allin/.npm/generator-webapp/0.4.9/package.tgz
+110 silly lockFile d30d0d44-nerator-webapp-0-4-9-package-tgz tar:///Users/allin/.npm/generator-webapp/0.4.9/package.tgz
+111 verbose chmod /Users/allin/.npm/generator-webapp/0.4.9/package.tgz 644
+112 verbose chown /Users/allin/.npm/generator-webapp/0.4.9/package.tgz [ 501, 20 ]
+113 silly lockFile 8bb37ce4-ebapp-generator-webapp-0-4-9-tgz https://registry.npmjs.org/generator-webapp/-/generator-webapp-0.4.9.tgz
+114 silly lockFile 8bb37ce4-ebapp-generator-webapp-0-4-9-tgz https://registry.npmjs.org/generator-webapp/-/generator-webapp-0.4.9.tgz
+115 silly lockFile 435edab0-generator-webapp-0-4-9 generator-webapp@0.4.9
+116 silly lockFile 435edab0-generator-webapp-0-4-9 generator-webapp@0.4.9
+117 silly lockFile 9a31b0a1-generator-webapp generator-webapp@*
+118 silly lockFile 9a31b0a1-generator-webapp generator-webapp@*
+119 info outdated updating [ [ '/usr/local/lib',
+119 info outdated     'generator-webapp',
+119 info outdated     '0.4.7',
+119 info outdated     '0.4.9',
+119 info outdated     '0.4.9',
+119 info outdated     '*' ] ]
+120 verbose install where,what [ '/usr/local/lib', [ 'generator-webapp@0.4.9' ] ]
+121 verbose cache add [ 'generator-webapp@0.4.9', null ]
+122 verbose cache add name=undefined spec="generator-webapp@0.4.9" args=["generator-webapp@0.4.9",null]
+123 verbose parsed url { protocol: null,
+123 verbose parsed url   slashes: null,
+123 verbose parsed url   auth: null,
+123 verbose parsed url   host: null,
+123 verbose parsed url   port: null,
+123 verbose parsed url   hostname: null,
+123 verbose parsed url   hash: null,
+123 verbose parsed url   search: null,
+123 verbose parsed url   query: null,
+123 verbose parsed url   pathname: 'generator-webapp@0.4.9',
+123 verbose parsed url   path: 'generator-webapp@0.4.9',
+123 verbose parsed url   href: 'generator-webapp@0.4.9' }
+124 verbose cache add name="generator-webapp" spec="0.4.9" args=["generator-webapp","0.4.9"]
+125 verbose parsed url { protocol: null,
+125 verbose parsed url   slashes: null,
+125 verbose parsed url   auth: null,
+125 verbose parsed url   host: null,
+125 verbose parsed url   port: null,
+125 verbose parsed url   hostname: null,
+125 verbose parsed url   hash: null,
+125 verbose parsed url   search: null,
+125 verbose parsed url   query: null,
+125 verbose parsed url   pathname: '0.4.9',
+125 verbose parsed url   path: '0.4.9',
+125 verbose parsed url   href: '0.4.9' }
+126 verbose addNamed [ 'generator-webapp', '0.4.9' ]
+127 verbose addNamed [ '0.4.9', '0.4.9' ]
+128 silly lockFile 435edab0-generator-webapp-0-4-9 generator-webapp@0.4.9
+129 verbose lock generator-webapp@0.4.9 /Users/allin/.npm/435edab0-generator-webapp-0-4-9.lock
+130 verbose url raw generator-webapp/0.4.9
+131 verbose url resolving [ 'https://registry.npmjs.org/', './generator-webapp/0.4.9' ]
+132 verbose url resolved https://registry.npmjs.org/generator-webapp/0.4.9
+133 info trying registry request attempt 1 at 02:04:29
+134 http GET https://registry.npmjs.org/generator-webapp/0.4.9
+135 http 200 https://registry.npmjs.org/generator-webapp/0.4.9
+136 silly registry.get cb [ 200,
+136 silly registry.get   { date: 'Mon, 16 Jun 2014 06:04:29 GMT',
+136 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R14B04)',
+136 silly registry.get     etag: '"5OKQ2UWKZC2KS986NQPCDGDGH"',
+136 silly registry.get     'content-type': 'application/json',
+136 silly registry.get     'cache-control': 'max-age=30',
+136 silly registry.get     'content-length': '1314',
+136 silly registry.get     'accept-ranges': 'bytes',
+136 silly registry.get     via: '1.1 varnish',
+136 silly registry.get     age: '0',
+136 silly registry.get     'x-served-by': 'cache-v36-ASH',
+136 silly registry.get     'x-cache': 'MISS',
+136 silly registry.get     'x-cache-hits': '0',
+136 silly registry.get     'x-timer': 'S1402898669.683518,VS0,VE14',
+136 silly registry.get     vary: 'Accept',
+136 silly registry.get     'keep-alive': 'timeout=10, max=50',
+136 silly registry.get     connection: 'Keep-Alive' } ]
+137 silly lockFile 8bb37ce4-ebapp-generator-webapp-0-4-9-tgz https://registry.npmjs.org/generator-webapp/-/generator-webapp-0.4.9.tgz
+138 verbose lock https://registry.npmjs.org/generator-webapp/-/generator-webapp-0.4.9.tgz /Users/allin/.npm/8bb37ce4-ebapp-generator-webapp-0-4-9-tgz.lock
+139 verbose addRemoteTarball [ 'https://registry.npmjs.org/generator-webapp/-/generator-webapp-0.4.9.tgz',
+139 verbose addRemoteTarball   'df8aa10af9bac7fd59f4072b9cdf0f120e8bb611' ]
+140 info retry fetch attempt 1 at 02:04:29
+141 verbose fetch to= /var/folders/rz/0qg57t812_38tqfd4m3q_q5w0000gn/T/npm-843-7bedn9Hs/1402898669725-0.18014582758769393/tmp.tgz
+142 http GET https://registry.npmjs.org/generator-webapp/-/generator-webapp-0.4.9.tgz
+143 http 200 https://registry.npmjs.org/generator-webapp/-/generator-webapp-0.4.9.tgz
+144 verbose tar unpack /var/folders/rz/0qg57t812_38tqfd4m3q_q5w0000gn/T/npm-843-7bedn9Hs/1402898669725-0.18014582758769393/tmp.tgz
+145 silly lockFile 17e19d80-9725-0-18014582758769393-package tar:///var/folders/rz/0qg57t812_38tqfd4m3q_q5w0000gn/T/npm-843-7bedn9Hs/1402898669725-0.18014582758769393/package
+146 verbose lock tar:///var/folders/rz/0qg57t812_38tqfd4m3q_q5w0000gn/T/npm-843-7bedn9Hs/1402898669725-0.18014582758769393/package /Users/allin/.npm/17e19d80-9725-0-18014582758769393-package.lock
+147 silly lockFile f71d9f45-9725-0-18014582758769393-tmp-tgz tar:///var/folders/rz/0qg57t812_38tqfd4m3q_q5w0000gn/T/npm-843-7bedn9Hs/1402898669725-0.18014582758769393/tmp.tgz
+148 verbose lock tar:///var/folders/rz/0qg57t812_38tqfd4m3q_q5w0000gn/T/npm-843-7bedn9Hs/1402898669725-0.18014582758769393/tmp.tgz /Users/allin/.npm/f71d9f45-9725-0-18014582758769393-tmp-tgz.lock
+149 silly gunzTarPerm modes [ '755', '644' ]
+150 silly gunzTarPerm extractEntry package.json
+151 silly gunzTarPerm extractEntry app/index.js
+152 silly gunzTarPerm extractEntry app/USAGE
+153 silly gunzTarPerm extractEntry app/templates/Gruntfile.js
+154 silly gunzTarPerm extractEntry app/templates/gitignore
+155 silly gunzTarPerm extractEntry app/templates/_bower.json
+156 silly gunzTarPerm extractEntry app/templates/_package.json
+157 silly gunzTarPerm extractEntry app/templates/editorconfig
+158 silly gunzTarPerm extractEntry app/templates/favicon.ico
+159 silly gunzTarPerm extractEntry app/templates/gitattributes
+160 silly gunzTarPerm extractEntry app/templates/404.html
+161 silly gunzTarPerm extractEntry app/templates/htaccess
+162 silly gunzTarPerm extractEntry app/templates/index.html
+163 silly gunzTarPerm extractEntry app/templates/jshintrc
+164 silly gunzTarPerm extractEntry app/templates/main.css
+165 silly gunzTarPerm extractEntry app/templates/main.scss
+166 silly gunzTarPerm extractEntry app/templates/robots.txt
+167 silly gunzTarPerm extractEntry readme.md
+168 silly lockFile 17e19d80-9725-0-18014582758769393-package tar:///var/folders/rz/0qg57t812_38tqfd4m3q_q5w0000gn/T/npm-843-7bedn9Hs/1402898669725-0.18014582758769393/package
+169 silly lockFile 17e19d80-9725-0-18014582758769393-package tar:///var/folders/rz/0qg57t812_38tqfd4m3q_q5w0000gn/T/npm-843-7bedn9Hs/1402898669725-0.18014582758769393/package
+170 silly lockFile f71d9f45-9725-0-18014582758769393-tmp-tgz tar:///var/folders/rz/0qg57t812_38tqfd4m3q_q5w0000gn/T/npm-843-7bedn9Hs/1402898669725-0.18014582758769393/tmp.tgz
+171 silly lockFile f71d9f45-9725-0-18014582758769393-tmp-tgz tar:///var/folders/rz/0qg57t812_38tqfd4m3q_q5w0000gn/T/npm-843-7bedn9Hs/1402898669725-0.18014582758769393/tmp.tgz
+172 verbose tar pack [ '/Users/allin/.npm/generator-webapp/0.4.9/package.tgz',
+172 verbose tar pack   '/var/folders/rz/0qg57t812_38tqfd4m3q_q5w0000gn/T/npm-843-7bedn9Hs/1402898669725-0.18014582758769393/package' ]
+173 verbose tarball /Users/allin/.npm/generator-webapp/0.4.9/package.tgz
+174 verbose folder /var/folders/rz/0qg57t812_38tqfd4m3q_q5w0000gn/T/npm-843-7bedn9Hs/1402898669725-0.18014582758769393/package
+175 silly lockFile 17e19d80-9725-0-18014582758769393-package tar:///var/folders/rz/0qg57t812_38tqfd4m3q_q5w0000gn/T/npm-843-7bedn9Hs/1402898669725-0.18014582758769393/package
+176 verbose lock tar:///var/folders/rz/0qg57t812_38tqfd4m3q_q5w0000gn/T/npm-843-7bedn9Hs/1402898669725-0.18014582758769393/package /Users/allin/.npm/17e19d80-9725-0-18014582758769393-package.lock
+177 silly lockFile d30d0d44-nerator-webapp-0-4-9-package-tgz tar:///Users/allin/.npm/generator-webapp/0.4.9/package.tgz
+178 verbose lock tar:///Users/allin/.npm/generator-webapp/0.4.9/package.tgz /Users/allin/.npm/d30d0d44-nerator-webapp-0-4-9-package-tgz.lock
+179 silly lockFile 17e19d80-9725-0-18014582758769393-package tar:///var/folders/rz/0qg57t812_38tqfd4m3q_q5w0000gn/T/npm-843-7bedn9Hs/1402898669725-0.18014582758769393/package
+180 silly lockFile 17e19d80-9725-0-18014582758769393-package tar:///var/folders/rz/0qg57t812_38tqfd4m3q_q5w0000gn/T/npm-843-7bedn9Hs/1402898669725-0.18014582758769393/package
+181 silly lockFile d30d0d44-nerator-webapp-0-4-9-package-tgz tar:///Users/allin/.npm/generator-webapp/0.4.9/package.tgz
+182 silly lockFile d30d0d44-nerator-webapp-0-4-9-package-tgz tar:///Users/allin/.npm/generator-webapp/0.4.9/package.tgz
+183 silly lockFile 58bb220d-m-generator-webapp-0-4-9-package /Users/allin/.npm/generator-webapp/0.4.9/package
+184 verbose lock /Users/allin/.npm/generator-webapp/0.4.9/package /Users/allin/.npm/58bb220d-m-generator-webapp-0-4-9-package.lock
+185 silly lockFile 58bb220d-m-generator-webapp-0-4-9-package /Users/allin/.npm/generator-webapp/0.4.9/package
+186 silly lockFile 58bb220d-m-generator-webapp-0-4-9-package /Users/allin/.npm/generator-webapp/0.4.9/package
+187 verbose tar unpack /Users/allin/.npm/generator-webapp/0.4.9/package.tgz
+188 silly lockFile c729b037-m-generator-webapp-0-4-9-package tar:///Users/allin/.npm/generator-webapp/0.4.9/package
+189 verbose lock tar:///Users/allin/.npm/generator-webapp/0.4.9/package /Users/allin/.npm/c729b037-m-generator-webapp-0-4-9-package.lock
+190 silly lockFile d30d0d44-nerator-webapp-0-4-9-package-tgz tar:///Users/allin/.npm/generator-webapp/0.4.9/package.tgz
+191 verbose lock tar:///Users/allin/.npm/generator-webapp/0.4.9/package.tgz /Users/allin/.npm/d30d0d44-nerator-webapp-0-4-9-package-tgz.lock
+192 silly gunzTarPerm modes [ '755', '644' ]
+193 silly gunzTarPerm extractEntry package.json
+194 silly gunzTarPerm extractEntry app/index.js
+195 silly gunzTarPerm extractEntry app/USAGE
+196 silly gunzTarPerm extractEntry app/templates/Gruntfile.js
+197 silly gunzTarPerm extractEntry app/templates/gitignore
+198 silly gunzTarPerm extractEntry app/templates/_bower.json
+199 silly gunzTarPerm extractEntry app/templates/_package.json
+200 silly gunzTarPerm extractEntry app/templates/editorconfig
+201 silly gunzTarPerm extractEntry app/templates/favicon.ico
+202 silly gunzTarPerm extractEntry app/templates/gitattributes
+203 silly gunzTarPerm extractEntry app/templates/404.html
+204 silly gunzTarPerm extractEntry app/templates/htaccess
+205 silly gunzTarPerm extractEntry app/templates/index.html
+206 silly gunzTarPerm extractEntry app/templates/jshintrc
+207 silly gunzTarPerm extractEntry app/templates/main.css
+208 silly gunzTarPerm extractEntry app/templates/main.scss
+209 silly gunzTarPerm extractEntry app/templates/robots.txt
+210 silly gunzTarPerm extractEntry readme.md
+211 silly lockFile c729b037-m-generator-webapp-0-4-9-package tar:///Users/allin/.npm/generator-webapp/0.4.9/package
+212 silly lockFile c729b037-m-generator-webapp-0-4-9-package tar:///Users/allin/.npm/generator-webapp/0.4.9/package
+213 silly lockFile d30d0d44-nerator-webapp-0-4-9-package-tgz tar:///Users/allin/.npm/generator-webapp/0.4.9/package.tgz
+214 silly lockFile d30d0d44-nerator-webapp-0-4-9-package-tgz tar:///Users/allin/.npm/generator-webapp/0.4.9/package.tgz
+215 verbose chmod /Users/allin/.npm/generator-webapp/0.4.9/package.tgz 644
+216 verbose chown /Users/allin/.npm/generator-webapp/0.4.9/package.tgz [ 501, 20 ]
+217 silly lockFile 8bb37ce4-ebapp-generator-webapp-0-4-9-tgz https://registry.npmjs.org/generator-webapp/-/generator-webapp-0.4.9.tgz
+218 silly lockFile 8bb37ce4-ebapp-generator-webapp-0-4-9-tgz https://registry.npmjs.org/generator-webapp/-/generator-webapp-0.4.9.tgz
+219 silly lockFile 435edab0-generator-webapp-0-4-9 generator-webapp@0.4.9
+220 silly lockFile 435edab0-generator-webapp-0-4-9 generator-webapp@0.4.9
+221 silly resolved [ { name: 'generator-webapp',
+221 silly resolved     version: '0.4.9',
+221 silly resolved     description: 'Scaffold out a front-end web app',
+221 silly resolved     license: 'BSD',
+221 silly resolved     repository: { type: 'git', url: 'git://github.com/yeoman/generator-webapp' },
+221 silly resolved     author: { name: 'The Yeoman Team' },
+221 silly resolved     main: 'app/index.js',
+221 silly resolved     engines: { node: '>=0.10.0', npm: '>=1.2.10' },
+221 silly resolved     scripts: { test: 'mocha --reporter spec' },
+221 silly resolved     files: [ 'app' ],
+221 silly resolved     keywords:
+221 silly resolved      [ 'yeoman-generator',
+221 silly resolved        'web',
+221 silly resolved        'app',
+221 silly resolved        'front-end',
+221 silly resolved        'h5bp',
+221 silly resolved        'modernizr',
+221 silly resolved        'jquery',
+221 silly resolved        'grunt' ],
+221 silly resolved     dependencies:
+221 silly resolved      { 'yeoman-generator': '~0.16.0',
+221 silly resolved        cheerio: '~0.13.0',
+221 silly resolved        chalk: '~0.4.0' },
+221 silly resolved     peerDependencies: { yo: '>=1.0.0', 'generator-mocha': '>=0.1.0' },
+221 silly resolved     devDependencies: { mocha: '*' },
+221 silly resolved     readme: '# Web app generator [![Build Status](https://secure.travis-ci.org/yeoman/generator-webapp.svg?branch=master)](http://travis-ci.org/yeoman/generator-webapp)\n\n[Yeoman](http://yeoman.io) generator that scaffolds out a front-end web app.\n\n![](http://i.imgur.com/uKTT2Hj.png)\n\n## Features\n\n* CSS Autoprefixing *(new)*\n* Built-in preview server with LiveReload\n* Automagically compile CoffeeScript & Sass\n* Automagically lint your scripts\n* Automagically wire up your Bower components with [bower-install](#third-party-dependencies).\n* Awesome Image Optimization (via OptiPNG, pngquant, jpegtran and gifsicle)\n* Mocha Unit Testing with PhantomJS\n* Optional - Bootstrap for Sass\n* Optional - Leaner Modernizr builds *(new)*\n\nFor more information on what `generator-webapp` can do for you, take a look at the [Grunt tasks](https://github.com/yeoman/generator-webapp/blob/master/app/templates/_package.json) used in our `package.json`.\n\n\n## Getting Started\n\n- Install: `npm install -g generator-webapp`\n- Run: `yo webapp`\n- Run `grunt` for building and `grunt serve` for preview [*](#serve-note)\n\n\n#### Third-Party Dependencies\n\n*(HTML/CSS/JS/Images/etc)*\n\nThird-party dependencies are managed with [bower-install](https://github.com/stephenplusplus/grunt-bower-install). Add new dependencies using **Bower** and then run the **Grunt** task to load them:\n\n```bash\n  bower install --save jquery\n  grunt bowerInstall\n```\n\nThis works if the package author has followed the [Bower spec](https://github.com/bower/bower.json-spec). If the files are not automatically added to your index.html, check with the package\'s repo for support and/or file an issue with them to have it updated.\n\nTo manually add dependencies, `bower install depName --save` to get the files, then add a `script` or `style` tag to your `index.html` or an other appropriate place.\n\nThe components are installed in the root of the project at `/bower_components`. To reference them from the `grunt serve` web app `index.html` file, use `src="bower_components"` or `src="/bower_components"`. Treat the references as if they were a sibling to `index.html`.\n\n*Testing Note*: a project checked into source control and later checked out, needs to have `bower install` run from the `test` folder as well as from project root.\n\n\n#### Grunt Serve Note\n\nNote: `grunt server` was previously used for previewing in earlier versions of the project and is being deprecated in favor of `grunt serve`.\n\n\n## Options\n\n* `--skip-install`\n\n  Skips the automatic execution of `bower` and `npm` after scaffolding has finished.\n\n* `--test-framework=<framework>`\n\n  Defaults to `mocha`. Can be switched for another supported testing framework like `jasmine`.\n\n* `--coffee`\n\n  Add support for [CoffeeScript](http://coffeescript.org/).\n\n\n## Contribute\n\nSee the [contributing docs](https://github.com/yeoman/yeoman/blob/master/contributing.md)\n\nNote: We are regularly asked whether we can add or take away features. If a change is good enough to have a positive impact on all users, we are happy to consider it.\n\nIf not, `generator-webapp` is fork-friendly and you can always maintain a custom version which you `npm install && npm link` to continue using via `yo webapp` or a name of your choosing.\n\n\n## License\n\n[BSD license](http://opensource.org/licenses/bsd-license.php)\n',
+221 silly resolved     readmeFilename: 'readme.md',
+221 silly resolved     bugs: { url: 'https://github.com/yeoman/generator-webapp/issues' },
+221 silly resolved     homepage: 'https://github.com/yeoman/generator-webapp',
+221 silly resolved     _id: 'generator-webapp@0.4.9',
+221 silly resolved     dist: { shasum: '9a519cc21b5800f99881ef4c7fec09908f4d1413' },
+221 silly resolved     _from: 'generator-webapp@0.4.9',
+221 silly resolved     _resolved: 'https://registry.npmjs.org/generator-webapp/-/generator-webapp-0.4.9.tgz' } ]
+222 info install generator-webapp@0.4.9 into /usr/local/lib
+223 info installOne generator-webapp@0.4.9
+224 info /usr/local/lib/node_modules/generator-webapp unbuild
+225 info preuninstall generator-webapp@0.4.7
+226 info uninstall generator-webapp@0.4.7
+227 verbose true,/usr/local/lib/node_modules,/usr/local/lib/node_modules unbuild generator-webapp@0.4.7
+228 info postuninstall generator-webapp@0.4.7
+229 info /usr/local/lib/node_modules/generator-webapp unbuild
+230 info preuninstall generator-webapp@0.4.7
+231 info uninstall generator-webapp@0.4.7
+232 verbose true,/usr/local/lib/node_modules,/usr/local/lib/node_modules unbuild generator-webapp@0.4.7
+233 info postuninstall generator-webapp@0.4.7
+234 error error rolling back Error: EACCES, unlink '/usr/local/lib/node_modules/generator-webapp'
+234 error error rolling back  generator-webapp@0.4.9 { [Error: EACCES, unlink '/usr/local/lib/node_modules/generator-webapp']
+234 error error rolling back   errno: 3,
+234 error error rolling back   code: 'EACCES',
+234 error error rolling back   path: '/usr/local/lib/node_modules/generator-webapp' }
+235 error Error: EACCES, unlink '/usr/local/lib/node_modules/generator-webapp'
+235 error  { [Error: EACCES, unlink '/usr/local/lib/node_modules/generator-webapp']
+235 error   errno: 3,
+235 error   code: 'EACCES',
+235 error   path: '/usr/local/lib/node_modules/generator-webapp' }
+236 error Please try running this command again as root/Administrator.
+237 error System Darwin 12.5.0
+238 error command "node" "/usr/local/bin/npm" "update" "-g" "generator-webapp"
+239 error cwd /Users/allin/Projects/Web/allinallin.github.io
+240 error node -v v0.10.24
+241 error npm -v 1.3.21
+242 error path /usr/local/lib/node_modules/generator-webapp
+243 error code EACCES
+244 error errno 3
+245 error stack Error: EACCES, unlink '/usr/local/lib/node_modules/generator-webapp'
+246 verbose exit [ 3, true ]
