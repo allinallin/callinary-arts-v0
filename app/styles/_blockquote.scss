@@ -1,0 +1,121 @@
+blockquote {
+	position:relative;
+	text-align:center;
+	padding:2em;
+	font-weight:300;
+	letter-spacing:0.025em;
+	margin:0;
+	line-height:1.4em;
+	@include font-size(18px);
+	@include box-sizing(border-box);
+	&.blue {
+		background:$blue;
+		background:rgba($blue, 0.6);
+		border-color:rgba($blueDark, 0.4);
+		border-style:solid;
+		border-top-width:15px;
+		border-bottom-width:15px;
+		border-left-width:0;
+		border-right-width:0;
+	}
+	&.green {
+		background:$green;
+		background:rgba($green, 0.6);
+		border-color:rgba($greenDark, 0.4);
+		border-style:solid;
+		border-top-width:15px;
+		border-bottom-width:15px;
+		border-left-width:0;
+		border-right-width:0;
+	}
+	&.red {
+		background:$red;
+		background:rgba($red, 0.6);
+		border-color:rgba($redDark, 0.4);
+		border-style:solid;
+		border-top-width:15px;
+		border-bottom-width:15px;
+		border-left-width:0;
+		border-right-width:0;
+	}
+	&.purple {
+		background:$purple;
+		background:rgba($purple, 0.6);
+		border-color:rgba($purpleDark, 0.4);
+		border-style:solid;
+		border-top-width:15px;
+		border-bottom-width:15px;
+		border-left-width:0;
+		border-right-width:0;
+	}
+	.wrapper {
+		max-width:$break-M;
+		margin:0 auto;
+		position:relative;
+		&:before, &:after {
+			content:'\201C';
+			position:absolute;
+			font-family:$fontSerif;
+			font-weight:900;
+			color:white;
+			opacity:0.5;
+			@include font-size(220px);
+		}
+		&:before {
+			top:0.15em;
+			left:-0.25em;
+		}
+		&:after {
+			content:'\201D';
+			bottom:-0.15em;
+			right:-0.25em;
+		}
+	}
+	p {
+		position: relative;
+	}
+	.source {
+		font-family:$fontSerif;
+		letter-spacing: 0.1em;
+		text-transform:uppercase;
+		margin-top:1em;
+		@include font-size(14px);
+		&:before, &:after {
+			content: ' - ';
+		}
+	}
+	&:before, &:after {
+		content:'';
+		display:none;
+		position:absolute;
+		width:25%;
+		height:2px;
+		left:0;
+		right:0;
+		margin:0 auto;
+		background:black;
+		opacity:0.2;
+	}
+	&:before {
+		top:0.5em;
+	}
+	&:after {
+		bottom:0.5em;
+	}
+	&.border-top:before {
+		display:block;
+	}
+	&.border-bottom:after {
+		display:block;
+	}
+}
+
+@include breakpoint($break-M) {
+	blockquote {
+		line-height:1.5em;
+		@include font-size(24px);
+		.source {
+			@include font-size(18px);
+		}
+	}
+}

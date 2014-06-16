@@ -1,0 +1,54 @@
+.hero {
+	width:100%;
+	min-height:300px;
+	height:100%;
+	top:0;
+	display:table;
+	.vertical-center {
+		display:table-cell;
+		vertical-align:middle;
+	}
+	.horizontal-center {
+		max-width:$break-M;
+		margin:0 auto;
+		padding:0 5px;
+	}
+	.logo {
+		max-width:$break-M;
+		margin:0 auto;
+		img {
+			width:100%;
+		}
+	}
+	p {
+		margin:1em auto 0;
+		text-align:right;
+		float:right;
+		@include font-size(12px);
+	}
+	.no-canvas & .gold-msg {
+		display:none;
+	}
+	.signature {
+		font-family:$fontSerif;
+		letter-spacing: 0.1em;
+		text-transform:uppercase;
+		line-height:2em;
+		@include font-size(12px);
+	}
+	button {
+		clear:both;
+		float:right;
+	}
+}
+@include breakpoint(500px) {
+	.hero {
+		.horizontal-center {
+			padding:0 2em;
+		}
+		p {
+			max-width:78%;
+			font-size:inherit;
+		}
+	}
+}

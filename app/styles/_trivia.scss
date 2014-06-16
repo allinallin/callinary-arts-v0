@@ -1,0 +1,203 @@
+@-webkit-keyframes mtaInputBorderColor {
+  0%   { border-color: #ccc; }
+  50% { border-color: $purple; }
+  100%   { border-color: #ccc; }
+}
+@-moz-keyframes mtaInputBorderColor {
+  0%   { border-color: #ccc; }
+  50% { border-color: $purple; }
+  100%   { border-color: #ccc; }
+}
+@-o-keyframes mtaInputBorderColor {
+  0%   { border-color: #ccc; }
+  50% { border-color: $purple; }
+  100%   { border-color: #ccc; }
+}
+@keyframes mtaInputBorderColor {
+  0%   { border-color: #ccc; }
+  50% { border-color: $purple; }
+  100%   { border-color: #ccc; }
+}
+
+@-webkit-keyframes mtaCircleColor {
+  0%   { background-color: #ccc; }
+  50% { background-color: $purple; }
+  100%   { background-color: #ccc; }
+}
+@-moz-keyframes mtaCircleColor {
+  0%   { background-color: #ccc; }
+  50% { background-color: $purple; }
+  100%   { background-color: #ccc; }
+}
+@-o-keyframes mtaCircleColor {
+  0%   { background-color: #ccc; }
+  50% { background-color: $purple; }
+  100%   { background-color: #ccc; }
+}
+@keyframes mtaCircleColor {
+  0%   { background-color: #ccc; }
+  50% { background-color: $purple; }
+  100%   { background-color: #ccc; }
+}
+.trivia {
+	padding:2em;
+	position: relative;
+	//background: rgba(lighten(#ccc, 5%), 0.5);
+	&:before {
+		content:'?!?!';
+		font-size:200px;
+		font-weight:800;
+		color:$yellowDark;
+		opacity:0.4;
+		line-height:0.25em;
+		position:absolute;
+		left:0;
+		right:0;
+		margin:auto;
+		display:block;
+		width:10px;
+		top:0;
+		@include rotate(5deg);
+	}
+	.wrapper {
+		max-width:$break-M;
+		margin:0 auto;
+		position: relative;
+	}
+	&.mta {
+		.circles {
+			text-align:center;
+			@include pie-clearfix;
+			&[data-animation=false] .circle {
+				-webkit-animation: 	none;
+				-moz-animation: 	none;
+				-o-animation: 		none;
+				animation: 			none;
+			}
+		}
+		.circle {
+			width:25px;
+			height:25px;
+			line-height:25px;
+			text-align:center;
+			background-color:#ccc;
+			color:#ccc;
+			font-weight:600;
+			margin:0 5px 5px 0;
+			-webkit-animation: 	mtaCircleColor 2s infinite;
+			-moz-animation: 	mtaCircleColor 2s infinite;
+			-o-animation: 		mtaCircleColor 2s infinite;
+			animation: 			mtaCircleColor 2s infinite;
+			@include border-radius(50%);
+			@include inline-block(top);
+			@include transition(background-color 0.8s, color 0.8s);
+		}
+		input {
+			text-align:center;
+			text-transform:uppercase;
+			display:block;
+			padding:10px;
+			margin:1em auto 0;
+			border:0;
+			border-bottom:3px solid #ccc;
+			background:transparent;
+			-webkit-animation: 	mtaInputBorderColor 2s infinite;
+			-moz-animation: 	mtaInputBorderColor 2s infinite;
+			-o-animation: 		mtaInputBorderColor 2s infinite;
+			animation: 			mtaInputBorderColor 2s infinite;
+			@include font-size(18px);
+		}
+		[data-color=red] {
+			background-color:red;
+			color:white;
+		}
+		[data-color=green] {
+			background-color:green;
+			color:white;
+		}
+		[data-color=purple] {
+			background-color:purple;
+			color:white;
+		}
+		[data-color=blue] {
+			background-color:blue;
+			color:white;
+		}
+		[data-color=orange] {
+			background-color:orange;
+			color:white;
+		}
+		[data-color=lime] {
+			background-color:lime;
+			color:white;
+		}
+		[data-color=brown] {
+			background-color:brown;
+			color:white;
+		}
+		[data-color=gray] {
+			background-color:gray;
+			color:white;
+		}
+		[data-color=yellow] {
+			background-color:yellow;
+			color:black;
+		}
+	}
+
+	&.off-road {
+		input {
+			position: absolute;
+			z-index:-1;
+		}
+		.message {
+			opacity:0;
+			display:block;
+			text-align:center;
+			font-style:italic;
+			color:$red;
+			margin-bottom:1em;
+			@include font-size(14px);
+			@include transition(opacity 0.4s);
+			&.active {
+				opacity:1;
+			}
+			&[data-valid="true"] {
+				color:$greenDark;
+			}
+		}
+		.button {
+			font-size:14px;
+			padding:6px 9px;
+			width:100%;
+			max-width:500px;
+			margin:0 auto;
+			display:block;
+			margin-top:0.5em;
+			@include box-sizing(border-box);
+			&.checked {
+				background:$purpleDark;
+			}
+		}
+	}
+}
+
+@include breakpoint($break-M) {
+	.trivia.off-road {
+		@include pie-clearfix;
+		.message {
+			font-size:inherit;
+		}
+		.button {
+			float:left;
+			width:48%;
+			margin-bottom:1%;
+		}
+		.add-margin {
+			margin-right:2%;
+		}
+	}
+}
+
+
+

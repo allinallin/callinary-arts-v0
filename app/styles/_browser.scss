@@ -1,0 +1,128 @@
+.browser {
+  width:550px;
+  height:390px;
+  position:relative;
+  float:left;
+  &.small {
+    width:352px;
+    height:250px;
+  }
+  .base {
+    background:#ccc;
+    position:relative;
+    width:100%;
+    height:100%;
+    padding-top:5px;
+    @include box-sizing(border-box);
+    @include border-radius(3px);
+  }
+  .buttons, 
+  .buttons:before, 
+  .buttons:after {
+    width:8px;
+    height:8px;
+    background:#9F9F9F;
+    position:absolute;
+    display:block;
+    @include border-radius(50%);
+  }
+  .buttons {
+    left:20px;
+    top:8px;
+    &:after {
+        content:'';
+        left:12px;
+    }
+    &:before {
+        content:'';
+        right:12px;
+    }
+  }
+  .tab {
+    width:100px;
+    height:15px;
+    margin-left:50px;
+    background:#EAEAE9;
+    position:relative;
+    z-index:1;
+    @include border-radius(2px 2px 0 0);
+    &:before, &:after {
+      content:'';
+      width:10px;
+      height:10px;
+      background:#ccc;
+      position:absolute;
+      bottom:0;
+      @include border-radius(2px);
+    }
+    &:before {
+      left:-10px;
+    }
+    &:after {
+      right:-10px;
+    }
+  }
+  .menubar {
+    background:#EAEAE9;
+    width:100%;
+    padding:5px 30px 5px 5px;
+    position:relative;
+    @include box-sizing(border-box);
+
+    &:before {
+      content:'';
+      position:absolute;
+      width:110px;
+      height:7px;
+      background:#EAEAE9;
+      top:-5px;
+      left:45px;
+    }
+  }
+  .locationbar {
+    width:100%;
+    height:15px;
+    background:white;
+    @include border-radius(2px);
+  }
+  .hamburger,
+  .hamburger:before,
+  .hamburger:after {
+    width:10px;
+    height:2px;
+    background:#9F9F9F;
+    position:absolute;
+    @include border-radius(5px);
+  }
+  .hamburger {
+    right:10px;
+    top:50%;
+    margin-top:-1.5px;
+    &:before {
+      content:'';
+      top: -4px;
+    }
+    &:after {
+      content:'';
+      top: 4px;
+    }
+  }
+  .viewport {
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:0;
+    padding:45px 0 10px;
+    @include box-sizing(border-box);
+    img {
+      position:absolute;
+      width:100%;
+    }
+  }
+  .frame {
+    overflow:hidden;
+    position:relative;
+    width:100%;
+    height:100%;
+  }
+}

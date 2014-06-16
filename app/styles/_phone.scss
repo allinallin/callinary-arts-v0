@@ -1,0 +1,77 @@
+$phoneWidth: 185;
+$phoneHeight: $phoneWidth*2.02;
+.phone {
+  // ~ 2:1 ratio
+  width:$phoneWidth + px;
+  height:$phoneHeight + px;
+  float:left;
+  @include translateX(0);
+  @include transition(transform 0.4s);
+  &.move {
+    @include translateX(200px);
+  }
+  &.small {
+    width: 100px;
+    height: 100*2.02px;
+  }
+  .base {
+    position:relative;
+    width:100%;
+    height:100%;
+    background:#ccc;
+    @include border-radius(#{18/$phoneWidth*100%}/#{18/$phoneHeight*100%});
+    &:after {
+      content:'';
+      position:absolute;
+      width:100%;
+      height:100%;
+      top:0;
+      display:block;
+      opacity:0.4;
+      @include box-shadow(0 0 0 3px gray inset);
+      @include border-radius(#{18/$phoneWidth*100%}/#{18/$phoneHeight*100%});
+    }
+  }
+  .bezel {
+    background:black;
+    width: 180 / $phoneWidth * 100%;
+    height: 315 / $phoneHeight * 100%;
+    margin: 0 auto;
+    top:8%;
+    position:relative;
+  }
+  .screen {
+    width: 160 / 185 * 100%;
+    height: 280 / 315 * 100%;
+    background:#222;
+    margin:0 auto;
+    top:3.5%;
+    position:relative;
+    overflow:hidden;
+    img {
+      position:absolute;
+      width:100%
+    }
+  }
+  .status {
+    width: 4 / $phoneWidth * 100%;
+    height: 4 / $phoneHeight * 100%;
+    background:black;
+    position:absolute;
+    @include border-radius(50%);
+    top:16/$phoneHeight*100%;
+    left:20/$phoneWidth*100%;
+    +.status {
+      left:27/$phoneWidth*100%;
+    }
+  }
+  .lens {
+    width: 15 / $phoneWidth * 100%;
+    height: 15 / $phoneHeight * 100%;
+    background:black;
+    position:absolute;
+    @include border-radius(50%);
+    top:10/$phoneHeight*100%;
+    left:150/$phoneWidth*100%;
+  }
+}

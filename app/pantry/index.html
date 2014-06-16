@@ -1,0 +1,349 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Pantry - Callinary Arts</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css ../styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) ../styles/main.css -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <!-- endbuild -->
+    <script src="../bower_components/modernizr/modernizr.js"></script>
+</head>
+<body class="page-pantry" style="background-image:url('../images/tiny_grid.png')">
+    <div class="preload">
+        <img class="gearBlue" src="../images/gearBlue.png" />
+        <img class="gearRed" src="../images/gearRed.png" />
+        <img class="gearGreen" src="../images/gearGreen.png" />
+        <img class="gearPurple" src="../images/gearPurple.png" />
+        <img class="gearYellow" src="../images/gearYellow.png" />
+        <img class="triangleGreen" src="../images/triangleGreen.png" />
+        <img class="triangleRed" src="../images/triangleRed.png" />
+        <img class="triangleBlue" src="../images/triangleBlue.png" />
+        <img class="trianglePurple" src="../images/trianglePurple.png" />
+        <img class="triangleYellow" src="../images/triangleYellow.png" />
+    </div>
+    <canvas id="fizzx"></canvas>
+    <div class="white-bg">
+        <div class="bg-fill" style="background:url('../images/tiny_grid.png');"></div>
+        <div class="wrapper">
+            <header>
+                <a href="/" class="logo">
+                <img class="svg" src="../images/logo_lg2.svg" alt="Callinary Arts by Allin Resposo" />
+                <img class="no-svg" src="../images/logo_lg2.png" alt="Callinary Arts by Allin Resposo" />
+                </a>
+                <p>This is a collection of tools and resources that I like referring to. Concept inspired by <a href="http://martinbuberl.com/resources/">this guy</a>.</p>
+            </header>
+            <div class="pantry-list">
+                <div class="group">
+                    <h3>IDEs and Text Editors</h3>
+                    <ul>
+                        <li><a href="http://www.sublimetext.com/3">Sublime Text</a>
+                            <ul>
+                                <li><a href="https://sublime.wbond.net/">Package Manager</a></li>
+                                <li><a href="https://github.com/sergeche/emmet-sublime">Emmet</a></li>
+                                <li><a href="https://github.com/skuroda/Sublime-AdvancedNewFile">Advanced New File</a></li>
+                                <li><a href="https://github.com/akalongman/sublimetext-codeformatter">CodeFormat</a></li>
+                                <li><a href="https://github.com/SublimeText/jQuery">jQuery syntax</a></li>
+                                <li><a href="https://github.com/purplefish32/sublime-text-2-wordpress">Wordpress syntax</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="http://macrabbit.com/espresso/">Espresso</a></li>
+                        <li><a href="http://notepad-plus-plus.org/">Notepad++</a></li>
+                        <li><a href="http://www.flos-freeware.ch/notepad2.html">Notepad2</a></li>
+                    </ul>
+                </div>
+                <div class="group">
+                    <h3>Browsers & Extensions</h3>
+                    <ul>
+                        <li><a href="https://www.google.com/intl/en-US/chrome/browser/">Chrome</a>
+                            <ul>
+                                <li><a href="https://chrome.google.com/webstore/detail/jsonview/chklaanhfefbnpoihckbnefhakgolnmc?hl=en">JSONView</a></li>
+                                <li><a href="https://chrome.google.com/webstore/detail/dhc-rest-http-api-client/aejoelaoggembcahagimdiliamlcdmfm?hl=en">Dev HTTP Client</a></li>
+                                <li><a href="https://chrome.google.com/webstore/detail/user-agent-switcher-for-c/djflhoibgkdhkhhcedjiklpkjnoahfmg?hl=en">User-Agent Switcher</a></li>
+                                <li><a href="https://chrome.google.com/webstore/detail/adblock/gighmmpiobklfepjocnamgkkbiglidom?hl=en">Adblock</a></li>
+                                <li><a href="https://chrome.google.com/webstore/detail/hangouts/nckgahadagoaajjgafhacjanaoiihapd?hl=en">Hangouts</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="http://www.mozilla.org/en-US/firefox/new/">Firefox</a>
+                            <ul>
+                                <li><a href="https://getfirebug.com/">Firebug</a></li>
+                                <li><a href="https://addons.mozilla.org/en-US/firefox/addon/adblock-plus/">Adblock Plus</a></li>
+                                <li><a href="https://addons.mozilla.org/en-US/firefox/addon/video-downloadhelper/">DownloadHelper</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="group"><h3>CSS Libraries</h3>
+                    <ul>
+                        <li><a href="http://necolas.github.io/normalize.css/">normalize.css</a></li>
+                        <li><a href="http://getbootstrap.com/">Bootstrap</a></li>
+                        <li><a href="http://sass-lang.com/">Sass</a></li>
+                        <li><a href="http://mhs.github.io/scout-app/">Scout</a></li>
+                    </ul>
+                </div>
+                <div class="group"><h3>Javascript and jQuery libraries</h3>
+                    <ul>
+                        <li><a href="http://modernizr.com/">modernizr</a></li>
+                        <li><a href="http://code.google.com/p/html5shiv/">html5shiv</a></li>
+                        <li><a href="https://angularjs.org/">angularjs</a></li>
+                        <li><a href="http://angular-ui.github.io/bootstrap/">angularbootstrap</a></li>
+                        <li><a href="http://jquery.com/">jQuery</a></li>
+                        <li><a href="http://jqueryvalidation.org/">jQuery validate</a></li>
+                        <li><a href="http://www.chartjs.org/">chart.js</a></li>
+                        <li><a href="https://github.com/carhartl/jquery-cookie">jQuery Cookie</a></li>
+                        <li><a href="http://code.google.com/p/google-code-prettify/">Google Code Prettify</a></li>
+                        <li><a href="http://eightmedia.github.io/hammer.js/">Hammer.js</a></li>
+                        <li><a href="http://wellcaffeinated.net/PhysicsJS/">PhysicsJS</a></li>
+                        <li><a href="http://paperjs.org/">Paper.js</a></li>
+                    </ul>
+                </div>
+                <div class="group">
+                    <h3>Design and Mockups</h3>
+                    <ul>
+                        <li><a href="http://www.photoshop.com/">Adobe Photoshop</a></li>
+                        <li><a href="http://www.adobe.com/products/illustrator.html">Adobe Illustrator</a></li>
+                        <li><a href="http://www.adobe.com/products/fireworks.html">Adobe Fireworks</a></li>
+                        <li><a href="http://balsamiq.com/">Balsamiq</a></li>
+                        <li><a href="http://www.invisionapp.com/">Invision</a></li>
+                    </ul>
+                </div>
+                <div class="group">
+                    <h3>UI Libraries</h3>
+                    <ul>
+                        <li><a href="http://subtlepatterns.com/">Subtle Patterns</a></li>
+                    </ul>
+                </div>
+                <div class="group"><h3>Video</h3>
+                    <ul>
+                        <li><a href="http://www.adobe.com/products/premiere.html">Adobe Premiere</a></li>
+                        <li><a href="http://handbrake.fr/">Handbrake</a></li>
+                        <li><a href="http://www.mirovideoconverter.com/">Miro Video Converter</a></li>
+                        <li><a href="http://www.cccp-project.net/">Combined Community Codec Pack</a></li>
+                    </ul>
+                </div>
+                <div class="group"><h3>Content Fillers</h3>
+                    <ul>
+                        <li><a href="http://www.fillerati.com/">Fillerati</a></li>
+                        <li><a href="http://placekitten.com/">Placekitten</a></li>
+                        <li><a href="http://placepu.gs/">Placepu.gs</a></li>
+                        <li><a href="http://placehold.it/">Placehold.it</a></li>
+                        <li><a href="http://lorempixel.com/">Lorempixel</a></li>
+                    </ul>
+                </div>
+                <div class="group">
+                    <h3>Organization</h3>
+                    <ul>
+                        <li><a href="https://trello.com/">Trello</a></li>
+                        <li><a href="https://basecamp.com/">Basecamp</a></li>
+                        <li><a href="http://lighthouseapp.com/">Lighthouse app</a></li>
+                    </ul>
+                </div>
+                <div class="group">
+                    <h3>PHP AMP Stacks</h3>
+                    <ul>
+                        <li><a href="http://www.mamp.info/en/">MAMP</a></li>
+                        <li><a href="http://www.wampserver.com/en/">WAMP</a></li>
+                    </ul>
+                </div>
+                <div class="group">
+                    <h3>Hosting</h3>
+                    <ul>
+                        <li><a href="https://www.webfaction.com/">WebFaction</a></li>
+                        <li><a href="http://mediatemple.net/">MediaTemple</a></li>
+                        <li><a href="http://mediatemple.net/webhosting/wordpress/">MediaTemple Wordpress Premium</a></li>
+                    </ul>
+                </div>
+                <div class="group">
+                    <h3>Domain registrars</h3>
+                    <ul>
+                        <li><a href="http://www.namecheap.com/">Namecheap</a></li>
+                        <li><a href="https://www.gandi.net/?currency=USD&lang=en">Gandi</a></li>
+                    </ul>
+                </div>
+                <div class="group">
+                    <h3>Email for custom domains</h3>
+                    <ul>
+                        <li><a href="http://outlook.com/">Outlook.com</a></li>
+                        <li><a href="http://www.google.com/enterprise/apps/business/">Gmail (Google Apps for Business)</a></li>
+                    </ul>
+                </div>
+                <div class="group"><h3>Productivity</h3>
+                    <ul>
+                        <li><a href="http://pomodorotechnique.com/">Pomodoro Technique</a>
+                            <ul>
+                                <li><a href="http://www.focusboosterapp.com/">Focus Booster</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="http://itsalmo.st/">It's Almost</a></li>
+                        <li><a href="https://www.dropbox.com/">Dropbox</a>
+                            <ul>
+                                <li><a href="https://www.dropbox.com/help/1964/en">Screenshot</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="https://ifttt.com/">IFTTT</a></li>
+                    </ul>
+                </div>
+                <div class="group">
+                    <h3>Ecommerce</h3>
+                    <ul>
+                        <li><a href="http://www.shopify.com/">Shopify</a></li>
+                        <li><a href="http://www.woothemes.com/woocommerce/">Woocommerce</a></li>
+                    </ul>
+                </div>
+                <div class="group">
+                    <h3>Website and CMS providers</h3>
+                    <ul>
+                        <li><a href="http://squarespace.com/">Squarespace</a></li>
+                        <li><a href="https://wordpress.com/">Wordpress (.com)</a></li>
+                        <li><a href="http://www.tumblr.com/">Tumblr</a></li>
+                        <li><a href="http://buildwithcraft.com/">Craft</a></li>
+                        <li><a href="http://wordpress.org/">Wordpress (.org)</a>
+                            <ul>
+                                <li><a href="https://wordpress.org/plugins/custom-post-type-ui/">Custom Post Type UI</a></li>
+                                <li><a href="https://wordpress.org/plugins/advanced-custom-fields/">Advanced Custom Fields</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="https://drupal.org/">Drupal</a>
+                            <ul>
+                                <li><a href="https://drupal.org/project/views">Views</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="group">
+                    <h3>Databases</h3>
+                    <ul>
+                        <li><a href="http://www.sequelpro.com/">Sequel Pro</a></li>
+                    </ul>
+                </div>
+                <div class="group">
+                    <h3>FTP</h3>
+                    <ul>
+                        <li><a href="https://filezilla-project.org/">Filezilla</a></li>
+                        <li><a href="http://cyberduck.io/?l=en">Cyberduck</a></li>
+                    </ul>
+                </div>
+                <div class="group">
+                    <h3>Version Control</h3><ul>
+                        <li><a href="">Git</a>
+                            <ul>
+                                <li><a href="https://github.com/">GitHub</a></li>
+                                <li><a href="http://code.google.com/p/gitextensions/">GitExtensions</a></li>
+                                <li><a href="http://www.sourcetreeapp.com/">Sourcetree</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="group">
+                    <h3>Charts</h3>
+                    <ul>
+                        <li><a href="http://www.gliffy.com/">Gliffy</a></li>
+                    </ul>
+                </div>
+                <div class="group">
+                    <h3>Inspiration</h3>
+                    <ul>
+                        <li><a href="http://www.thefwa.com/">Favorite Website Awards</a></li>
+                        <li><a href="http://www.awwwards.com/">Awwwards</a></li>
+                    </ul>
+                </div>
+                <div class="group">
+                    <h3>Testing</h3>
+                    <ul>
+                        <li><a href="http://www.browserstack.com/">Browserstack</a></li>
+                        <li><a href="http://www.telerik.com/fiddler">Fiddler</a></li>
+                        <li><a href="http://en.wikipedia.org/wiki/Ipfirewall">IpFirewall</a></li>
+                        <li><a href="https://modern.ie/en-us">modern.ie</a></li>
+                        <li><a href="http://www.google.com/analytics/">Google Analytics</a></li>
+                        <li><a href="http://caniuse.com/">Can I Use...</a></li>
+                        <li><a href="http://www.emailonacid.com/">Email on Acid</a></li>
+                    </ul>
+                </div>
+                <div class="group">
+                    <h3>Team Interaction</h3><ul>
+                        <li><a href="http://www.google.com/+/learnmore/hangouts/">Hangouts</a></li>
+                        <li><a href="http://www.skype.com/en/">Skype</a>
+                            <ul>
+                                <li><a href="http://www.ecamm.com/mac/callrecorder/">Call Recorder</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="http://www.teamviewer.com/en/">TeamViewer</a></li>
+                        <li><a href="http://www.gotomeeting.com/">GoToMeeting</a></li>
+                    </ul>
+                </div>
+                <div class="group">
+                    <h3>Snippets and Sandboxes</h3>
+                    <ul>
+                        <li><a href="http://codepen.io/">CodePen</a></li>
+                        <li><a href="http://jsbin.com/">JS Bin</a></li>
+                        <li><a href="http://jsfiddle.net/">JSFiddle</a></li>
+                        <li><a href="https://gist.github.com/">Github Gists</a></li>
+                    </ul>
+                </div>
+                <div class="group">
+                    <h3>Answers</h3>
+                    <ul>
+                        <li><a href="http://stackoverflow.com/">Stack Overflow</a></li>
+                        <li><a href="http://www.wolframalpha.com/">Wolfram Alpha</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="button-wrapper">
+                <a href="/" class="button red home">View Homepage</a>
+            </div>
+        </div>
+    </div>
+    <div class="bg-dark-gray"></div>
+    <footer id="footer">
+        <div class="wrapper">
+            <h2>Looking for more?</h2>
+            <p>This may be the end of the web page, but it could be the start of a wonderful relationship! If you're interested, get in touch with me through one of the channels listed below. In any case, I hope you have a great rest of the day.</p>
+            <a href="http://www.linkedin.com/in/allinresposo/" class="button green">View my LinkedIn</a>
+            <button class="button blue" data-email-modal-toggle="nyyva~pnyyvanelnegf`pb">Get my email address</button>
+        </div>
+        <div class="modal">
+            <div class="background-overlay"></div>
+            <div class="horizontal-center">
+                <div class="vertical-center">
+                    <div class="wrapper">
+                        <button class="icon">&times;</button>
+                        <p>Here's my address:</p>
+                        <input type="text" readonly>
+                        <a href="nyyva~pnyyvanelnegf`pb" class="button">Email me</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- build:js ../scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="../bower_components/jquery/jquery.js"></script>
+    <script src="../bower_components/jquery.easing/js/jquery.easing.js"></script>
+    <script src="../bower_components/physicsjs/dist/physicsjs-full-0.6.0.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+                        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+                        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+                        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+                        e.src='//www.google-analytics.com/analytics.js';
+                        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+                        ga('create','UA-XXXXX-X');ga('send','pageview');
+    </script>
+    <!-- build:js({app,.tmp}) scripts/main.js -->
+    <script src="../scripts/main.js"></script>
+    <script src="../scripts/physicsEngine.js"></script>
+    <!-- endbuild -->
+</body>
+</html>

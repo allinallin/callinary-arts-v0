@@ -1,0 +1,37 @@
+$blue: #8FB7F7;
+$blueDark: darken($blue, 10%);
+$green: #91D849;
+$greenDark: darken($green, 10%);
+$red: #ED706B;
+$redDark: darken($red, 10%);
+$yellow: #F4EB7A;
+$yellowDark: darken($yellow, 10%);
+$purple: #F2B3FF;
+$purpleDark: darken($purple, 10%);
+$fontSans: 'Open Sans', sans-serif;
+$fontSansBold: 700;
+$fontSansBlack: 800;
+$fontSerif: 'Georgia';
+
+//Media Queries
+$break-XS: 320px;
+$break-S: 480px;
+$break-M: 768px;
+$break-L: 895px;
+$break-XL: 1024px;
+
+@mixin breakpoint($screenWidth: 400px) {
+	@if ($MQs) {
+	  	@media screen and (min-width: $screenWidth) { @content; }
+	}
+	@else {
+		@content;
+	}
+}
+
+$base-font-size: 16px;
+
+@mixin font-size($px, $base: $base-font-size) {
+	font-size: $px;
+	font-size: ($px / $base) * 1rem;
+}

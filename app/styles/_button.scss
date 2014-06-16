@@ -1,0 +1,71 @@
+
+.button {
+    margin-top:2em;
+}
+.icon {
+    -webkit-apperance: none;
+    background:transparent;
+	border:0;
+    font-family:inherit;
+	font-size:inherit;
+    font-weight:$fontSansBold;
+    @include border-radius(0);
+}
+.button {
+	border:0;
+	background:#CCC;
+	position: relative;
+    padding:10px 15px;
+    font-family:inherit;
+	font-size:inherit;
+    font-weight:$fontSansBold;
+    color:white;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    text-decoration: none;
+    -webkit-apperance: none;
+    @include border-radius(0);
+    @include inline-block(top);
+    @include transition(all 0.2s ease);
+	&:hover {
+		background:#555;
+		&:before {
+			display:none;
+		}
+	}
+	.blue &, 
+	&.blue {
+	    background:$blue;
+	    &:hover {
+	        background:$blueDark;
+	    }
+	}
+	.green &, 
+	&.green {
+	    background:$green;
+	    &:hover {
+	        background:$greenDark;
+	    }
+	}
+	.red &,
+	&.red {
+		background:$red;
+		&:hover {
+			background:$redDark;
+		}
+	}
+	.purple &,
+	&.purple {
+		background:$purple;
+		&:hover {
+			background:$purpleDark;
+		}
+	}
+	.yellow &,
+	&.yellow {
+		background:$yellow;
+		&:hover {
+			background:$yellowDark;
+		}
+	}
+} 

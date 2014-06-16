@@ -1,0 +1,320 @@
+.projects {
+	padding:5em 0;
+}
+.project {
+	overflow: hidden;
+	padding:5em 0;
+	position: relative;
+	.wrapper {
+		max-width:960px;
+		margin:0 auto;
+	}
+	.mockups {
+		width:445px;
+		position: relative;
+		margin-bottom:50px;
+		@include pie-clearfix;
+	}
+	.phone {
+		position:relative;
+		top:60px;
+		z-index: 1;
+	}
+	.text {
+		padding:0 1.5em;
+		position: relative;
+		line-height:1.5em;
+		clear:both;
+	}
+
+	&.left {		
+		.mockups {
+			margin-left:-50px;
+			float:left;
+		}
+		.phone {
+			left:-60px;
+		}
+		.outline {
+			left:-10px;
+			&:before {
+				right:-50px;
+			}
+		}
+	}
+	&.right {
+		.mockups {
+			margin-right:-50px;
+			float:right;
+		}
+		.phone {
+			right:-60px;
+		}
+		.outline {
+			right:-10px;
+			&:before {
+				left:-50px;
+			}
+		}
+	}
+
+	&.blue {
+		background:rgba($blue,0.5);
+		color:darken($blue,80%);
+		.outline {
+		    background:lighten($blue, 15%);
+		    border-color:lighten($blue,15%);
+		    &:before {
+		        background:lighten($blue, 15%);
+		        border-color:lighten($blue,15%);
+		    }
+		}
+		.background:after {
+			background:rgba(#c4d8f8,0.9);
+		}
+	}
+
+	&.green {
+		background:rgba($green,0.5);
+		color:darken($green,80%);
+		.outline {
+		    background:lighten($green, 25%);
+		    border-color:lighten($green,25%);
+		    &:before {
+		        background:lighten($green, 25%);
+		        border-color:lighten($green,25%);
+		    }
+		}
+		.background:after {
+			background:rgba(#c5e9a1,0.9);
+		}
+	}
+
+	&.browser-preview-only {
+		.mockups {
+			width:345px;
+		}
+		.outline:before {
+			display:none;
+		}
+	}
+	.role {
+		margin:0 0 0.3em;
+	}
+	.tags {
+		list-style-type:none;
+		margin-top:3px;
+		padding:0;
+		@include font-size(11px);
+		li {
+			padding:0 5px;
+			background:#ddd;
+			color:#555;
+			font-family:Georgia;
+			font-weight:600;
+			font-style:italic;
+			letter-spacing:0.075em;
+			margin:0 3px 7px 0;
+			@include border-radius(5px);
+			@include inline-block;
+		}
+	}
+	.tagline {
+	    margin:0;
+	    padding-bottom:0.75em;
+	    margin-bottom:0.75em;
+	    text-transform: uppercase;
+	    letter-spacing: 0.075em;
+	    border-bottom:1px dotted #ccc;
+	    font-family:$fontSerif;
+		letter-spacing: 0.1em;
+		@include font-size(12px);
+	}
+}
+
+@include breakpoint($break-S) {
+	.project {
+		&.left, &.right {
+			.mockups {
+				float:none;
+				margin-left: auto;
+				margin-right: auto;
+			}
+		}
+		&.left {
+			.mockups {
+				left:30px;
+			}
+		}
+		&.right {
+			.mockups {
+				right:30px;
+			}
+		}
+		&.browser-preview-only {
+			.mockups {
+				left:auto;
+				right:auto;
+			}
+		}
+		.text {
+			max-width:400px;
+			margin:0 auto;
+		}
+	}
+}
+
+@include breakpoint($break-M) {
+	.project {
+		.mockups {
+			padding-bottom:3em;
+			border-bottom:1px dotted #ccc;
+		}
+		.text:before {
+			content:'';
+			height:100%;
+			position:absolute;
+			border-left:1px dotted #ccc;
+		}
+		&.left {
+			.mockups {
+				float:left;
+				margin-right:-50px;
+				left:auto;
+			}
+			.text:before {
+				left:10px;
+			}
+		}
+		&.right {
+			.mockups {
+				float:right;
+				margin-left:-50px;
+				right:auto;
+			}
+			.text:before {
+				right:1%;
+			}
+		}
+		&.browser-preview-only {
+			&.left .mockups {
+				margin-right:10px;
+			}
+			.mockups {
+				margin-left:0;
+				margin-right:0;
+				padding-bottom:2em;
+			}
+			.text {
+				max-width:53%;
+			}
+		}
+		.text {
+			min-width:300px;
+			max-width:47%;
+			margin:auto;
+			@include inline-block(top);
+			@include box-sizing(border-box);
+		}
+	}
+}
+
+@include breakpoint($break-L) {
+	.project {
+		.text {
+			max-width:55%;
+		}
+		&.browser-preview-only {
+			.text {
+				max-width:60%;
+			}
+		}
+	}
+}
+@include breakpoint($break-XL) {
+	.project {
+		.text {
+			max-width:58%;
+		}
+		&.right {
+			.text:before {
+				right:10px;
+			}
+		}
+		&.browser-preview-only {
+			.text {
+				max-width:63%;
+			}
+		}
+	}
+}
+.outline {
+    width:344px;
+    height:244px;
+    top:-10px;
+    position: absolute;
+    background:rgba(#ddd, 0.5);
+    border: 10px solid rgba(#ddd, 0.5);
+    @include border-radius(5px);
+    @include transition(all 0.4s);
+    &:before {
+        content:'';
+        display:block;
+        width:100px;
+        height:202px;
+        top:50px;
+        position:absolute;
+        background:#EEE;
+    	border: 10px solid rgba(#ddd, 0.5);
+        @include border-radius(10px);
+    }
+}
+/*
+.project + .project {
+	.background:before {
+		background-image:url(http://placekitten.com/550/440);
+	}
+	& + .project {
+		.background:before {
+			background-image:url(http://placekitten.com/550/540);
+		}
+		& + .project {
+			.background:before {
+				background-image:url(http://placekitten.com/550/640);
+			}
+		}
+	}
+
+}
+*/
+.background {
+	position: absolute;
+	width:100%;
+	height:100%;
+	top:0;
+	left:0;
+	&:before {
+		content:'';
+		width:100%;
+		height:100%;
+		position: absolute;
+		top:0;
+		left:0;
+		background:url(http://placekitten.com/550/340) no-repeat center fixed;
+		@include background-size(cover);
+		@include filter(grayscale(100%));
+		opacity:0.5;
+	}
+	&:after {
+		content:'';
+		width:100%;
+		height:100%;
+		position: absolute;
+		top:0;
+		left:0;
+		background:rgba(white, 0.9);
+		@include filter(none);
+	}
+}
+
+		
