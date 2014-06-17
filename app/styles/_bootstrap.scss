@@ -46,7 +46,9 @@ a {
         }
     }
 }
-
+.lazy {
+    display: none;
+}
 ::selection {
     background:$purple;
     background:rgba($purple,0.7);

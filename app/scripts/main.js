@@ -214,7 +214,10 @@ if ($('body').hasClass('page-home')) {
 
 // Lazy load images
 $(function() {
-    $('img.lazy').lazyload();
+    $('img.lazy').show().lazyload({
+		threshold: 500,
+		effect: 'fadeIn'
+    });
 });
 /*
 $(function() {
