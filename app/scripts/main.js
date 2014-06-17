@@ -211,6 +211,11 @@ app.trivia.offRoad = (function() {
 if ($('body').hasClass('page-home')) {
 	app.trivia.offRoad.init();
 }
+
+// Lazy load images
+$(function() {
+    $('img.lazy').lazyload();
+});
 /*
 $(function() {
 	'use strict';
