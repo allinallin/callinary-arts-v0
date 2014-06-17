@@ -11,6 +11,18 @@ default_email=
 #repository to deploy to. must be readable and writable.
 repo=origin
 
+# Use custom domain?
+customDomain=true
+
+# The url of your production site
+prodUrl="callinaryarts.co"
+
+if [ $customDomain == true ]
+then
+  echo "Generating CNAME"
+  echo $prodUrl > dist/CNAME
+fi
+
 if [[ $1 = "-v" || $1 = "--verbose" ]]; then
 	verbose=true
 fi
