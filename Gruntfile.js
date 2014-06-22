@@ -313,7 +313,7 @@ module.exports = function(grunt) {
         }
         grunt.task.run(['connect:test', 'mocha']);
     });
-    grunt.registerTask('build', ['clean:dist', 'useminPrepare', 'concurrent:dist', 'autoprefixer', 'concat', 'cssmin', 'uglify', 'copy:dist', 'modernizr', 'rev', 'usemin'
+    grunt.registerTask('build', ['clean:dist', 'useminPrepare', 'concurrent:dist', 'autoprefixer', 'handlebars', 'concat', 'cssmin', 'uglify', 'copy:dist', 'modernizr', 'rev', 'usemin'
         //'htmlmin'
     ]);
     grunt.registerTask('default', ['newer:jshint', 'test', 'build']);
