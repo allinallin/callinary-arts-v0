@@ -38,6 +38,11 @@ app.ui.emailModal.hide = function() {
 };
 
 $(function() {
+
+	if (location.search === '?goto=projects') {
+		app.ui.scrollTo('#projects');
+	}
+
 	$('[data-scroll-to]').on('click', function(e) {
 		e.preventDefault();
 		app.ui.scrollTo(this.getAttribute('data-scroll-to'));
@@ -51,6 +56,15 @@ $(function() {
 			setTimeout(function() {
 				$elm.text(originalText);
 			}, 600);
+		}
+	});
+
+	$(function() {
+		if ($('img.lazy').length) {
+		    $('img.lazy').show().lazyload({
+				threshold: 500,
+				effect: 'fadeIn'
+		    });
 		}
 	});
 
@@ -79,7 +93,7 @@ $(function() {
 
 app.ui.scrollTo = function(selector) {
 	var $elm = $(selector),
-		elmTop = $elm.position().top;
+		elmTop = $elm.offset().top;
 
 	$('html,body').animate({
 		scrollTop: elmTop
@@ -212,13 +226,6 @@ if ($('body').hasClass('page-home')) {
 	app.trivia.offRoad.init();
 }
 
-// Lazy load images
-$(function() {
-    $('img.lazy').show().lazyload({
-		threshold: 500,
-		effect: 'fadeIn'
-    });
-});
 /*
 $(function() {
 	'use strict';

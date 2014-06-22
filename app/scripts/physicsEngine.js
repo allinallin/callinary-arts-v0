@@ -26,10 +26,13 @@ app.ui.physicsEngine = (function() {
                 viewportBounds = Physics.aabb(0, 0, viewWidth, viewHeight),
                 edgeBounce,
                 renderer,
-                maxBodies = 30,
-                resizeTimer = null;
+                maxBodiesDesktop = 20,
+                maxBodiesMobile = 10,
+                widthBreakpoint = 768,
+                resizeTimer = null,
+                dropInt = null;
 
-            if (viewArea < minArea) {
+            if (viewArea < minArea && viewWidth > widthBreakpoint) {
                 viewportBounds = Physics.aabb(0, 0, viewWidth, minArea/viewWidth);
             }
 
@@ -65,11 +68,13 @@ app.ui.physicsEngine = (function() {
                     viewWidth = window.innerWidth;
                     viewHeight = window.innerHeight;
                     viewArea = viewWidth * viewHeight;
+                    var currMaxBodies = (viewWidth > widthBreakpoint) ? maxBodiesDesktop : maxBodiesMobile;
+                    var currNumBodies = world._bodies.length;
 
                     renderer.el.width = viewWidth;
                     renderer.el.height = viewHeight;
 
-                    if (viewArea < minArea) {
+                    if (viewArea < minArea && viewWidth > widthBreakpoint) {
                         viewportBounds = Physics.aabb(0, 0, viewWidth, minArea/viewWidth);
                     } else {
                         viewportBounds = Physics.aabb(0, 0, viewWidth, viewHeight);
@@ -77,7 +82,16 @@ app.ui.physicsEngine = (function() {
                     // update the boundaries
                     edgeBounce.setAABB(viewportBounds);
 
-                    if (world._bodies.length > maxBodies) {
+                    if (currNumBodies > currMaxBodies) {
+                        for (var i = currNumBodies; i >= currMaxBodies; i--) {
+                            world.removeBody(world._bodies[i]);
+                        };
+                    } else if (currNumBodies < currMaxBodies) {
+                        clearInterval( dropInt );
+                        startDropInterval();
+                    }
+
+                    if (currNumBodies >= currMaxBodies) {
                         for (var i = world._bodies.length - 1; i >= 0; i--) {
                             var body = world._bodies[i];
 
@@ -171,12 +185,17 @@ app.ui.physicsEngine = (function() {
                 }, 10000);
             }
 
-            var int = setInterval(function(){
-                if ( world._bodies.length > maxBodies ){
-                    clearInterval( int );
-                }
-                dropInBody();
-            }, 1000);
+            function startDropInterval() {
+                dropInt = setInterval(function(){
+                    var currMaxBodies = (viewWidth > widthBreakpoint) ? maxBodiesDesktop : maxBodiesMobile;
+                    if ( world._bodies.length > currMaxBodies - 2){
+                        clearInterval( dropInt );
+                    }
+                    dropInBody();
+                }, 1000);
+            }
+
+            startDropInterval();
 
             // add some fun interaction
             var attractor = Physics.behavior('attractor', {
