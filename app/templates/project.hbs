@@ -1,0 +1,135 @@
+{{#each this}}
+<div class="project{{#if_even @index}} left{{/if_even}}{{#if_odd @index}} right{{/if_odd}}{{#if browserPreviewOnly}} browser-preview-only{{/if}}">
+    <!-- <div class="background"></div> -->
+    <div class="wrapper">
+        <div class="mockups">
+            <div class="outline"></div>
+
+            {{#if mobileImageUrl}}
+            {{#if_odd @index}}
+            <div class="phone small">
+                <div class="base">
+                    <div class="status one"></div>
+                    <div class="status two"></div>
+                    <div class="lens"></div>
+                    <div class="bezel">
+                        <div class="screen">
+                            <img class="lazy" src="images/transparent.gif" data-original="{{mobileImageUrl}}"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{/if_odd}}
+            {{/if}}
+            <div class="browser">
+                <div class="base">
+                    <div class="buttons"></div>
+                    <div class="tab"></div>
+                    <div class="menubar">
+                        <div class="locationbar"></div>
+                        <div class="hamburger"></div>
+                    </div>
+                    <div class="viewport">
+                        <div class="frame">
+                            <img class="lazy" src="images/transparent.gif" data-original="{{browserImageUrl}}"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{#if mobileImageUrl}}
+            {{#if_even @index}}
+            <div class="phone small">
+                <div class="base">
+                    <div class="status one"></div>
+                    <div class="status two"></div>
+                    <div class="lens"></div>
+                    <div class="bezel">
+                        <div class="screen">
+                            <img class="lazy" src="images/transparent.gif" data-original="{{mobileImageUrl}}"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{/if_even}}
+            {{/if}}
+        </div>
+        <div class="text">
+            <h2>{{title}}</h2>
+            <p class="tagline">{{tagline}}</p>
+            <p class="role">Role: {{role}}</p>
+            {{#if tags}}
+            <ul class="tags">
+                {{#each tags}}
+                <li>{{this}}</li>
+                {{/each}}
+            </ul>
+            {{/if}}
+            {{description}}
+            <div class="button-wrapper">
+            <a rel="nofollow" href="{{link}}" class="button">Visit Site</a></div>
+        </div>
+    </div>
+</div>
+{{#ifCond title '==' 'Line Posters'}}
+    <div class="trivia mta">
+        <div class="wrapper">
+            <p>Line Posters first came about when visitors suggested to the founders that they start selling their artwork of the New York subway. Do you think you can <strong>name all the NY subway lines</strong>? Start typing below to begin.</p>
+            <div class="circles">
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+            </div>
+            <input type="text" maxlength="1" placeholder="Type here" onkeyup="app.trivia.mta.checkInput(this)" />
+        </div>
+    </div>
+{{/ifCond}}
+{{#ifCond title '==' 'Off Road China'}}
+    <div class="trivia off-road">
+        <div class="wrapper">
+            <p>The Off Road trekkers previously lived in China for several years before publishing and writing a cook book detailing their experience. <strong>Which of the following did <em>not</em> originate from China?</strong></p>
+            <span class="message"></span>
+            <div class="multiple-choice">
+                
+                <label class="button purple add-margin" for="off-road-choice-a">
+                    <input type="radio" name="off-road" id="off-road-choice-a" value="a">
+                    A. Rice
+                </label>
+
+                <label class="button purple" for="off-road-choice-b">
+                    <input type="radio" name="off-road" id="off-road-choice-b" value="b">
+                    B. Noodles & pasta
+                </label>
+                
+                <label class="button purple add-margin" for="off-road-choice-c">
+                    <input type="radio" name="off-road" id="off-road-choice-c" value="c">
+                    C. Fortune cookies
+                </label>
+
+                <label class="button purple" for="off-road-choice-d">
+                    <input type="radio" name="off-road" id="off-road-choice-d" value="d">
+                    D. Alcohol Beverages
+                </label>
+            </div>
+        </div>
+    </div>
+{{/ifCond}}
+{{/each}}
