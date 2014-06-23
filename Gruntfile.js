@@ -301,7 +301,7 @@ module.exports = function(grunt) {
         if (target === 'dist') {
             return grunt.task.run(['build', 'connect:dist:keepalive']);
         }
-        grunt.task.run(['clean:server', 'concurrent:server', 'autoprefixer', 'connect:livereload', 'watch']);
+        grunt.task.run(['clean:server', 'concurrent:server', 'autoprefixer', 'handlebars', 'connect:livereload', 'watch']);
     });
     grunt.registerTask('server', function() {
         grunt.log.warn('The `server` task has been deprecated. Use `grunt serve` to start a server.');

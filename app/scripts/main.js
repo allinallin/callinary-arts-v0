@@ -1,4 +1,9 @@
 'use strict';
+
+window.console = window.console || { log:function() {} };
+
+console.info(' Hi, thanks for visiting! This website was crafted with the help of:\n Grunt, Bower, Yeoman, Handlebars.js, jQuery, PhysicsJS, Sass and Compass!');
+
 var app = app || {
     ui: {
         emailModal: {}
@@ -9,6 +14,7 @@ var app = app || {
     },
     security: {}
 };
+
 app.projects = (function(CallinaryArts, projectsJson) {
     function init() {
         $(function() {
