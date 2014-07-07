@@ -29,7 +29,7 @@ app.ui.physicsEngine = (function() {
                 edgeBounce,
                 renderer,
                 maxBodiesDesktop = 20,
-                maxBodiesMobile = 10,
+                maxBodiesMobile = 0,
                 widthBreakpoint = 768,
                 resizeTimer = null,
                 dropInt = null;

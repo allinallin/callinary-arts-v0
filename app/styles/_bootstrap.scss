@@ -112,6 +112,12 @@ a {
     bottom:0;
     left:0;
     overflow:hidden;
-    display:block;
     z-index:1;
+    display:none;
+}
+
+@include breakpoint($break-M) {
+    #fizzx {
+        display:block;
+    }
 }
