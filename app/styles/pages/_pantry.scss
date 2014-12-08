@@ -1,10 +1,7 @@
 .page-pantry {
 	.white-bg {
-		border-bottom:15px solid $red;
-		&:after {
-			content:'';
-			display:block;
-			border-bottom:5px solid $red;
+		&:before {
+			display: none;
 		}
 	}
 	.white-bg > .wrapper {

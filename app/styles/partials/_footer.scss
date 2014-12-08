@@ -8,9 +8,7 @@
 		margin:0 auto;
 	}
 	h2 {
-		text-align:center;
 		margin-bottom:1.5em;
-		font-weight:$fontSansBold;
 	}
 	p {
 		@include font-size(12px);

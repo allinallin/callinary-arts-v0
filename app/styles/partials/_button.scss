@@ -1,6 +1,5 @@
-
-.button {
-    margin-top:2em;
+button {
+    cursor: pointer;
 }
 .icon {
     -webkit-apperance: none;
@@ -16,6 +15,7 @@
 	background:#CCC;
 	position: relative;
     padding:10px 15px;
+    margin-top:2em;
     font-family:inherit;
 	font-size:inherit;
     font-weight:$fontSansBold;

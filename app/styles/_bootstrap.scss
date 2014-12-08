@@ -1,5 +1,5 @@
 @import "compass/css3";
-@import "_variables";
+@import "modules/_variables";
 @import "compass/utilities/general/clearfix";
 
 html, body { margin:0; padding:0; height:100%; }
@@ -19,6 +19,32 @@ h1, h2, h3, h4 {
     text-transform: uppercase;
     margin:0;
     letter-spacing: 0.075em;
+}
+
+
+h2 {
+    position: relative;
+    text-align: center;
+    font-weight:$fontSansBold;
+    &:after {
+        content: '';
+        position: relative;
+        top: 0.25em;
+        display: block;
+        margin: 0 auto;
+        width: 200px;
+        border-bottom: 1px dotted #ccc;
+    }
+}
+
+.csstransforms3d h2.delay {
+    opacity: 0;
+    @include transform(rotate(4deg) translate3d(0, 2em, 0));
+    @include transition(all 0.3s ease-out);
+    &.active {
+        opacity: 1;
+        @include transform(rotate(0) translate3d(0, 0, 0));
+    }
 }
 
 a {
@@ -70,15 +96,15 @@ a {
     }
 }
 
-@import "_hero";
-@import "_browser";
-@import "_phone";
-@import "_project";
-@import "_button";
-@import "_blockquote";
-@import "_trivia";
-@import "_footer";
-@import "_pantry";
+@import "partials/_hero";
+@import "partials/_browser";
+@import "partials/_phone";
+@import "partials/_project";
+@import "partials/_button";
+@import "partials/_blockquote";
+@import "partials/_trivia";
+@import "partials/_footer";
+@import "pages/_pantry";
 
 .browser {
     width:344px;
@@ -105,6 +131,17 @@ a {
         left:0;
         background:url('/images/tiny_grid.png');
         opacity:0.7;
+    }
+    &:before, 
+    &:after {
+        content:'';
+        position:absolute;
+        width:100%;
+        z-index:1;
+        border-top:15px dotted $yellow;
+    }
+    &:after {
+        bottom:0;
     }
 }
 #fizzx {

@@ -1,12 +1,21 @@
 'use strict';
 
 window.console = window.console || { log:function() {} };
+window.requestAnimationFrame = (function(){
+    return window.requestAnimationFrame    ||
+        window.webkitRequestAnimationFrame ||
+        window.mozRequestAnimationFrame    ||
+        function( callback ){
+            window.setTimeout(callback, 1000 / 60);
+        };
+})();
 
 console.info(' Hi, thanks for visiting! This website was crafted with the help of:\n Grunt, Bower, Yeoman, Handlebars.js, jQuery, PhysicsJS, Sass and Compass!');
 
 var app = app || {
     ui: {
-        emailModal: {}
+        emailModal: {},
+        sectionHeader: {}
     },
     projects: {},
     trivia: {
@@ -24,14 +33,17 @@ app.projects = (function(CallinaryArts, projectsJson) {
             app.trivia.offRoad.init();
         });
     }
+
     return {
         data: projectsJson,
         init: init
     };
 })(window.CallinaryArts, window.projectsJson);
+
 if ($('body').hasClass('page-home')) {
     app.projects.init();
 }
+
 app.security.decodeAddress = function(phraseString) {
     var step1 = phraseString.replace(/[a-zA-Z]/g, function(c) {
         return String.fromCharCode((c <= 'Z' ? 90 : 122) >= (c = c.charCodeAt(0) + 13) ? c : c - 26);
@@ -40,6 +52,7 @@ app.security.decodeAddress = function(phraseString) {
     var step3 = step2.replace(/`/g, '.');
     return step3;
 };
+
 app.ui.emailModal.show = function(address) {
     var $modal = $('.modal'),
         $input = $('input', $modal),
@@ -48,9 +61,22 @@ app.ui.emailModal.show = function(address) {
     $input.val(address).select();
     $mailTo.attr('href', 'mailto:' + address);
 };
+
 app.ui.emailModal.hide = function() {
     var $modal = $('.modal');
     $modal.removeClass('active');
+};
+
+app.ui.sectionHeader.show = function($elm) {
+    if ($elm instanceof jQuery) {
+        $elm.addClass('active');
+    }
+};
+
+app.ui.sectionHeader.hide = function($elm) {
+    if ($elm instanceof jQuery) {
+        $elm.removeClass('active');
+    }
 };
 
 app.ui.lazyload = function() {
@@ -62,43 +88,6 @@ app.ui.lazyload = function() {
     }
 };
 
-$(function() {
-    if (location.search === '?goto=projects') {
-        app.ui.scrollTo('#projects');
-    }
-    $('[data-scroll-to]').on('click', function(e) {
-        e.preventDefault();
-        app.ui.scrollTo(this.getAttribute('data-scroll-to'));
-        var $elm = $(e.target);
-        if ($elm.hasClass('button')) {
-            var originalText = $elm.text(),
-                temporaryText = 'Wooo yeah!';
-            $elm.text(temporaryText);
-            setTimeout(function() {
-                $elm.text(originalText);
-            }, 600);
-        }
-    });
-        
-    $('[data-email-modal-toggle]').on('click', function() {
-        var code = $(this).attr('data-email-modal-toggle'),
-            address = app.security.decodeAddress(code);
-        app.ui.emailModal.show(address);
-    });
-    $('.modal').on('click', 'input', function() {
-        $(this).select();
-    });
-    $('.background-overlay, .icon', '.modal').on('click', function() {
-        app.ui.emailModal.hide();
-    });
-    $(document).keyup(function(e) {
-        // ESC key
-        if (e.keyCode === 27) {
-            app.ui.emailModal.hide();
-        }
-    });
-    app.ui.lazyload();
-});
 app.ui.scrollTo = function(selector) {
     var $elm = $(selector),
         elmTop = $elm.offset().top;
@@ -106,6 +95,7 @@ app.ui.scrollTo = function(selector) {
         scrollTop: elmTop
     }, 600, 'easeInQuad');
 };
+
 app.ui.greeting = (function() {
     var date = new Date(),
         hour = date.getHours();
@@ -129,9 +119,96 @@ app.ui.greeting = (function() {
         init: init
     };
 })();
+
 if ($('body').hasClass('page-home')) {
     app.ui.greeting.init();
 }
+
+$(function() {
+    if (location.search === '?goto=projects') {
+        app.ui.scrollTo('#projects');
+    }
+
+    var lastScrollPos = -1,
+        ticking = false;
+
+    function checkDelayedHeader() {
+        ticking = false;
+
+        var scrollPos = lastScrollPos;
+        var windowHeight = window.innerHeight;
+        var $delayedHeaders = $('h2.delay');
+
+        $delayedHeaders.each(function() {
+            var headerPos = $(this).offset().top;
+            var appearDelay = parseInt( $(this).attr('data-appear-delay') );
+            var appearDelayFloat = appearDelay / 100;
+            var triggerPosY = scrollPos + windowHeight * (1 - appearDelayFloat);
+
+            if (triggerPosY > headerPos) {
+                app.ui.sectionHeader.show($(this));
+            }
+        });
+
+        if ($delayedHeaders.length === $('h2.delay.active').length) {
+            $(window).off('scroll', onScroll);
+        }
+    }
+
+    function requestTick() {
+        if (!ticking) {
+            console.log('tick');
+            window.requestAnimationFrame(checkDelayedHeader);
+        }
+        ticking = true;
+    }
+
+    function onScroll() {
+        lastScrollPos = window.scrollY;
+        requestTick();
+    }
+
+    if (window.Modernizr.csstransforms3d && $('h2.delay').length) {
+        $(window).on('scroll', onScroll);
+    }
+
+    $('[data-scroll-to]').on('click', function(e) {
+        e.preventDefault();
+        app.ui.scrollTo(this.getAttribute('data-scroll-to'));
+        var $elm = $(e.target);
+        if ($elm.hasClass('button')) {
+            var originalText = $elm.text(),
+                temporaryText = 'Wooo yeah!';
+            $elm.text(temporaryText);
+            setTimeout(function() {
+                $elm.text(originalText);
+            }, 600);
+        }
+    });
+        
+    $('[data-email-modal-toggle]').on('click', function() {
+        var code = $(this).attr('data-email-modal-toggle'),
+            address = app.security.decodeAddress(code);
+        app.ui.emailModal.show(address);
+    });
+
+    $('.modal').on('click', 'input', function() {
+        $(this).select();
+    });
+
+    $('.background-overlay, .icon', '.modal').on('click', function() {
+        app.ui.emailModal.hide();
+    });
+
+    $(document).keyup(function(e) {
+        // ESC key
+        if (e.keyCode === 27) {
+            app.ui.emailModal.hide();
+        }
+    });
+
+    app.ui.lazyload();
+});
 app.trivia.mta = (function() {
     var whitelist, colors, circles, circlesContainer;
 
@@ -152,6 +229,7 @@ app.trivia.mta = (function() {
         circles = document.querySelectorAll('.mta .circle');
         circlesContainer = document.querySelector('.mta .circles');
     }
+
     return {
         init: init,
         checkInput: checkInput
@@ -199,45 +277,3 @@ app.trivia.offRoad = (function() {
         init: init
     };
 })();
-/*
-$(function() {
-    'use strict';
-    // Move each project up
-    // For every pixel scrolled from the top, 
-    // move project 1/3 of that amount
-    
-    // Detect request animation frame
-    var scroll = window.requestAnimationFrame ||
-                 window.webkitRequestAnimationFrame ||
-                 window.mozRequestAnimationFrame ||
-                 window.msRequestAnimationFrame ||
-                 window.oRequestAnimationFrame ||
-                 // IE Fallback, you can even fallback to onscroll
-                 function(callback){ window.setTimeout(callback, 1000/60); };
-
-    var lastPosition = -1;
-
-    app.ui.translateProjects = function() {
-        if (lastPosition === window.pageYOffset) {
-            scroll( app.ui.translateProjects );
-            return false;
-        } else {
-            lastPosition = window.pageYOffset;
-        }
-
-        var scrollTop = window.pageYOffset,
-            projectDelta = parseInt(scrollTop/-10),
-            $projects = $('.text');
-
-        $projects.css({
-            '-webkit-transform': 'translate3d(0,' + projectDelta + 'px, 0)',
-            '-moz-transform': 'translate3d(0,' + projectDelta + 'px, 0)',
-            'transform': 'translate3d(0,' + projectDelta + 'px, 0)'
-        });
-
-        scroll( app.ui.translateProjects );
-    };
-
-    app.ui.translateProjects();
-});
-*/
