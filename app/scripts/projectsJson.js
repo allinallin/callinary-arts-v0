@@ -23,7 +23,7 @@ var projectsJson = [{
     tagline: 'Let\'s bike across China',
     role: 'Developer',
     tags: [' Squarespace', 'Sass', 'jQuery', 'Git', 'Creative Suite'],
-    description: 'A sibling adventure duo asked me to help pitch their upcoming TV series. I gave them an interactive site that mapped out the 100 mile cultural journey from Beijing to Hong Kong.',
+    description: 'A sibling adventure duo asked me to help pitch their upcoming TV series. I gave them an interactive site that mapped out the 1220 mile cultural journey from Beijing to Hong Kong.',
     link: 'http://taketheoffroad.com/',
     browserPreviewOnly: true,
     browserImageUrl: 'images/screenshots/offroad2.gif',

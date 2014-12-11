@@ -18,6 +18,18 @@
 		max-width:290px;
 		@include box-sizing(border-box);
 	}
+	> .wrapper > .button {
+		overflow: hidden;
+		text-align: center;
+		padding-left: 4em;
+	}
+	.ss-icon {
+		font-size: 2.8em;
+		position: absolute;
+		left: 20px;
+		top: -.1em;
+		transform: rotate(-10deg);
+	}
 	> .wrapper .button {
 		margin:1em 0 0;
 	}

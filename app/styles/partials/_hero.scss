@@ -36,6 +36,18 @@
 		line-height:2em;
 		@include font-size(12px);
 	}
+	.social {
+		color: #555;
+		border-bottom: 0;
+		margin-left: 0.5em;
+		&:hover {
+			background: none;
+			color: black;
+			&:before {
+				display: none;
+			}
+		}
+	}
 	button {
 		clear:both;
 		float:right;
