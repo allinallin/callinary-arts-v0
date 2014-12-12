@@ -266,13 +266,22 @@ module.exports = function(grunt) {
         // Copies remaining files to places other tasks can use
         copy: {
             dist: {
-                files: [{
-                    expand: true,
-                    dot: true,
-                    cwd: '<%= yeoman.app %>',
-                    dest: '<%= yeoman.dist %>',
-                    src: ['*.{ico,png,txt}', '.htaccess', 'images/{,*/}*.webp', '{,*/}*.html', 'styles/fonts/{,*/}*.*', 'webfonts/{,*/}*.*', '*.pdf']
-                }]
+                files: [
+                    {
+                        expand: true,
+                        dot: true,
+                        cwd: '<%= yeoman.app %>',
+                        dest: '<%= yeoman.dist %>',
+                        src: ['*.{ico,png,txt}', '.htaccess', 'images/{,*/}*.webp', '{,*/}*.html', 'styles/fonts/{,*/}*.*', 'webfonts/{,*/}*.*', '*.pdf']
+                    },
+                    {
+                        expand: true,
+                        dot: true,
+                        cwd: '<%= yeoman.app %>/bower_components/font-awesome',
+                        dest: '<%= yeoman.dist %>/bower_components/font-awesome',
+                        src: ['fonts/*.*']
+                    }
+                ]
             },
             styles: {
                 expand: true,

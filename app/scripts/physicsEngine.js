@@ -115,15 +115,15 @@ app.ui.physicsEngine = (function() {
                 ,{ x:112, y: 97 }
             ];
 
-            var gearBlue = document.querySelector('.gearBlue'),
-                gearRed = document.querySelector('.gearRed'),
-                gearGreen = document.querySelector('.gearGreen'),
-                gearPurple = document.querySelector('.gearPurple'),
+            var // gearBlue = document.querySelector('.gearBlue'),
+                // gearRed = document.querySelector('.gearRed'),
+                // gearGreen = document.querySelector('.gearGreen'),
+                // gearPurple = document.querySelector('.gearPurple'),
                 gearYellow = document.querySelector('.gearYellow'),
-                triangleGreen = document.querySelector('.triangleGreen'),
-                triangleRed = document.querySelector('.triangleRed'),
-                triangleBlue = document.querySelector('.triangleBlue'),
-                trianglePurple = document.querySelector('.trianglePurple'),
+                // triangleGreen = document.querySelector('.triangleGreen'),
+                // triangleRed = document.querySelector('.triangleRed'),
+                // triangleBlue = document.querySelector('.triangleBlue'),
+                // trianglePurple = document.querySelector('.trianglePurple'),
                 triangleYellow = document.querySelector('.triangleYellow');
 
             var gearArray = [ gearYellow ];
