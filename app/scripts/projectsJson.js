@@ -34,7 +34,7 @@ var projectsJson = [{
     role: 'Designer and developer',
     tags: ['Drupal', 'Creative Suite', 'Axure', 'PHP', 'LESS', 'Git'],
     description: 'The Yard Our League (TYOLMag) is a non-profit online magazine that provides a platform for Black students in college to connect and share information with one another and others. It features news articles, event listings, and an area to spotlight colleges and individuals that are making a difference.',
-    link: 'http://tyolmag.com/',
+    link: '',
     browserPreviewOnly: true,
     browserImageUrl: 'images/screenshots/yard-desktop.jpg',
     mobileImageUrl: null
