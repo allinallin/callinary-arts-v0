@@ -39,7 +39,7 @@ Website will run on simple web server, as triggered by the command `grunt serve`
 Github pages runs on the master branch. The source branch builds production files to be pulled into master.
 
 1. Commit files on source branch
-2. Run `grunt` to build `dist` folder
+2. Run `grunt build` to build `dist` folder
 3. Run the deploy script with `./deploy.sh -s`
 
 ## Reminders
