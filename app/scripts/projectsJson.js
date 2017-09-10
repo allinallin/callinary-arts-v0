@@ -4,7 +4,7 @@ var projectsJson = [{
     role: 'Front-end developer at SMAKK Studios',
     tags: ['Agency work', 'Umbraco', 'AngularJS', 'Wordpress', 'Sass', 'jQuery', 'Git', 'Issue Tracking', 'Creative Suite'],
     description: 'BFX Studio wanted an upscale website to launch with its grand opening of fitness classes. I worked on the dev team at SMAKK Studios to create a responsive marketing and class scheduling site built on top of the Umbraco CMS. I used AngularJS to dynamically load in gym management data from an external API and quickly swap out search results for classes, instructors, or products.',
-    link: 'http://bfxstudio.com/',
+    link: '',
     browserPreviewOnly: false,
     browserImageUrl: 'images/screenshots/gym-desktop.jpg',
     mobileImageUrl: 'images/screenshots/gym-mobile.jpg'
@@ -44,7 +44,7 @@ var projectsJson = [{
     role: 'Designer and developer',
     tags: ['Wordpress', 'Creative Suite', 'PHP'],
     description: 'Rambax MIT is an ensemble focusing on the art of sabar, a vibrant drum and dance tradition of the Wolof people of Senegal, West Africa. Made up of members of the MIT community, the group studies and rehearses Senegalese drumming techniques and spoken word. This website a place for the curious to learn more and for the staff to privately post rehearsal footage.',
-    link: 'http://rambax.mit.edu/',
+    link: '',
     browserPreviewOnly: false,
     browserImageUrl: 'images/screenshots/sabar-desktop.jpg',
     mobileImageUrl: 'images/screenshots/sabar-mobile.jpg'
